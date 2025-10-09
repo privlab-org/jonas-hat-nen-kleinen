@@ -1,4 +1,6 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import teamImage from "@/assets/team-image.jpg";
 
 const Team = () => {
@@ -105,6 +107,9 @@ const Team = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
+      <CookieConsent />
     </div>
   );
 };

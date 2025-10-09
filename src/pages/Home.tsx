@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Heart, Users, Clock, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 
 const Home = () => {
   return (
@@ -127,51 +129,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="font-semibold mb-4">PHYSIOVIO</h3>
-              <p className="text-sm text-muted-foreground">
-                Professionelle Physiotherapie für Ihre Gesundheit und Ihr Wohlbefinden.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Kontakt</h3>
-              <p className="text-sm text-muted-foreground">
-                Musterstraße 123<br />
-                12345 Musterstadt<br />
-                Tel: 0123 456789<br />
-                info@physiovio.de
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Schnelllinks</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/team" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
-                    Unser Team
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/opening-hours" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
-                    Öffnungszeiten
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
-                    Kontakt
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            © 2025 PHYSIOVIO. Alle Rechte vorbehalten.
-          </div>
-        </div>
-      </footer>
+      <Footer />
+      <CookieConsent />
     </div>
   );
 };

@@ -1,4 +1,6 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import { Calendar, Clock, CheckCircle } from "lucide-react";
 
 const Booking = () => {
@@ -104,6 +106,9 @@ const Booking = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
+      <CookieConsent />
     </div>
   );
 };

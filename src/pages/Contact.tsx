@@ -1,4 +1,6 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -139,6 +141,9 @@ const Contact = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
+      <CookieConsent />
     </div>
   );
 };

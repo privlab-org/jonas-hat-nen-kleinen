@@ -1,4 +1,6 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import { Clock, Calendar, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -140,6 +142,9 @@ const OpeningHours = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
+      <CookieConsent />
     </div>
   );
 };
