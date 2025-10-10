@@ -19,11 +19,11 @@ const OpeningHours = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main className="pt-32 pb-20">
+      <main id="main-content" className="pt-32 pb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl gradient-primary mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl gradient-primary mb-6" aria-hidden="true">
               <Clock className="h-10 w-10 text-white" />
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -38,10 +38,10 @@ const OpeningHours = () => {
             {/* Opening Hours Card */}
             <div className="p-8 rounded-2xl border border-border bg-card shadow-lg">
               <h2 className="text-2xl font-semibold mb-6 flex items-center">
-                <Calendar className="h-6 w-6 text-secondary mr-3" />
+                <Calendar className="h-6 w-6 text-secondary mr-3" aria-hidden="true" />
                 Praxiszeiten
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-4" role="table" aria-label="Öffnungszeiten der Praxis">
                 {hours.map((item, index) => (
                   <div
                     key={index}
@@ -50,14 +50,16 @@ const OpeningHours = () => {
                         ? "bg-muted/50"
                         : "bg-muted hover:bg-muted/80 transition-colors"
                     }`}
+                    role="row"
                   >
-                    <span className="font-medium">{item.day}</span>
+                    <span className="font-medium" role="cell">{item.day}</span>
                     <span
                       className={
                         item.time === "Geschlossen"
                           ? "text-muted-foreground"
                           : "text-secondary font-medium"
                       }
+                      role="cell"
                     >
                       {item.time}
                     </span>
@@ -73,12 +75,12 @@ const OpeningHours = () => {
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-6 w-6 text-secondary" />
+                      <Phone className="h-6 w-6 text-secondary" aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-medium mb-1">Telefon</p>
                       <a
-                        href="tel:0123456789"
+                        href="tel:+49123456789"
                         className="text-muted-foreground hover:text-secondary transition-colors"
                       >
                         0123 456 789
@@ -88,7 +90,7 @@ const OpeningHours = () => {
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-6 w-6 text-secondary" />
+                      <Mail className="h-6 w-6 text-secondary" aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-medium mb-1">E-Mail</p>

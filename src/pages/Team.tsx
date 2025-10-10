@@ -44,7 +44,7 @@ const Team = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main className="pt-32 pb-20">
+      <main id="main-content" className="pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
@@ -62,10 +62,13 @@ const Team = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={teamImage}
-                alt="PHYSIOVIO Team"
+                alt="PHYSIOVIO Team - Professionelle Physiotherapeuten in Musterstadt"
                 className="w-full h-auto"
+                loading="lazy"
+                width="1200"
+                height="600"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" aria-hidden="true" />
             </div>
           </div>
 
@@ -78,7 +81,7 @@ const Team = () => {
               >
                 <div className="flex items-start space-x-4">
                   <Avatar className="w-20 h-20 flex-shrink-0">
-                    <AvatarImage src={member.image} alt={member.name} />
+                    <AvatarImage src={member.image} alt={`Profilbild von ${member.name}`} loading="lazy" />
                     <AvatarFallback className="gradient-primary text-white text-xl font-bold">
                       {member.name.charAt(0)}
                     </AvatarFallback>

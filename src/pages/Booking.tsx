@@ -8,11 +8,11 @@ const Booking = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main className="pt-32 pb-20">
+      <main id="main-content" className="pt-32 pb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl gradient-primary mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl gradient-primary mb-6" aria-hidden="true">
               <Calendar className="h-10 w-10 text-white" />
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -26,8 +26,8 @@ const Booking = () => {
 
           {/* Booking Widget Placeholder */}
           <div className="mb-12">
-            <div className="p-12 rounded-2xl border-2 border-dashed border-border bg-muted/30 text-center">
-              <Calendar className="h-16 w-16 text-secondary mx-auto mb-4" />
+            <div className="p-12 rounded-2xl border-2 border-dashed border-border bg-muted/30 text-center" role="region" aria-label="Terminbuchungs-Widget-Bereich">
+              <Calendar className="h-16 w-16 text-secondary mx-auto mb-4" aria-hidden="true" />
               <h2 className="text-2xl font-semibold mb-3">
                 Terminbuchungs-Widget
               </h2>
@@ -46,7 +46,7 @@ const Booking = () => {
           {/* How it Works */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center p-6 rounded-xl bg-card border border-border">
-              <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mx-auto mb-4" aria-hidden="true">
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
               <h3 className="text-lg font-semibold mb-2">Termin wählen</h3>
@@ -57,7 +57,7 @@ const Booking = () => {
             </div>
 
             <div className="text-center p-6 rounded-xl bg-card border border-border">
-              <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mx-auto mb-4" aria-hidden="true">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
               <h3 className="text-lg font-semibold mb-2">Daten eingeben</h3>
@@ -67,7 +67,7 @@ const Booking = () => {
             </div>
 
             <div className="text-center p-6 rounded-xl bg-card border border-border">
-              <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mx-auto mb-4" aria-hidden="true">
                 <CheckCircle className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Bestätigung</h3>
@@ -79,22 +79,22 @@ const Booking = () => {
 
           {/* Alternative Contact */}
           <div className="p-8 rounded-2xl gradient-soft border border-border text-center">
-            <Clock className="h-10 w-10 text-secondary mx-auto mb-4" />
+            <Clock className="h-10 w-10 text-secondary mx-auto mb-4" aria-hidden="true" />
             <h3 className="text-xl font-semibold mb-3">
               Lieber telefonisch buchen?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Kein Problem! Rufen Sie uns an unter{" "}
               <a
-                href="tel:0123456789"
-                className="font-medium text-secondary hover:underline"
+                href="tel:+49123456789"
+                className="font-medium text-secondary hover:underline focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-1 rounded"
               >
                 0123 456 789
               </a>{" "}
               oder senden Sie uns eine E-Mail an{" "}
               <a
                 href="mailto:info@physiovio.de"
-                className="font-medium text-secondary hover:underline"
+                className="font-medium text-secondary hover:underline focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-1 rounded"
               >
                 info@physiovio.de
               </a>
