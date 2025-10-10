@@ -1,7 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import teamImage from "@/assets/team-image.jpg";
+import teamAnna from "@/assets/team-anna.jpg";
+import teamMarkus from "@/assets/team-markus.jpg";
+import teamLisa from "@/assets/team-lisa.jpg";
+import teamThomas from "@/assets/team-thomas.jpg";
 
 const Team = () => {
   const team = [
@@ -10,24 +15,28 @@ const Team = () => {
       role: "Leitende Physiotherapeutin",
       specialization: "Manuelle Therapie, Sportphysiotherapie",
       description: "15 Jahre Erfahrung in der Behandlung von Sport- und Alltagsverletzungen",
+      image: teamAnna,
     },
     {
       name: "Markus Weber",
       role: "Physiotherapeut",
       specialization: "Orthopädie, Neurologie",
       description: "Spezialisiert auf neurologische Rehabilitation und orthopädische Nachsorge",
+      image: teamMarkus,
     },
     {
       name: "Lisa Müller",
       role: "Physiotherapeutin",
       specialization: "Lymphdrainage, Beckenbodentherapie",
       description: "Zertifizierte Therapeutin für Lymphologie und prä-/postnatale Behandlungen",
+      image: teamLisa,
     },
     {
       name: "Thomas Klein",
       role: "Physiotherapeut",
       specialization: "Manuelle Therapie, CMD",
       description: "Experte für Kiefergelenksstörungen und manuelle Behandlungstechniken",
+      image: teamThomas,
     },
   ];
 
@@ -68,9 +77,12 @@ const Team = () => {
                 className="p-8 rounded-2xl border border-border bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
-                    {member.name.charAt(0)}
-                  </div>
+                  <Avatar className="w-20 h-20 flex-shrink-0">
+                    <AvatarImage src={member.image} alt={member.name} />
+                    <AvatarFallback className="gradient-primary text-white text-xl font-bold">
+                      {member.name.charAt(0)}
+                    </AvatarFallback>
+                  </Avatar>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
                     <p className="text-secondary font-medium mb-2">{member.role}</p>

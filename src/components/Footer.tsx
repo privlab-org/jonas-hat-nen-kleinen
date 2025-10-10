@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-border py-12 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <img src={logo} alt="PHYSIOVIO Logo" className="h-10 w-auto mb-4" />
             <p className="text-sm text-muted-foreground">
@@ -37,16 +37,6 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold mb-4">Kontakt</h3>
-            <p className="text-sm text-muted-foreground">
-              Musterstraße 123<br />
-              12345 Musterstadt<br />
-              Tel: 0123 456789<br />
-              info@physiovio.de
-            </p>
           </div>
           
           <div>
