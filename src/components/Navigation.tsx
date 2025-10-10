@@ -24,6 +24,16 @@ const Navigation = () => {
       >
         Zum Hauptinhalt springen
       </a>
+
+      {/* Mobile Menu Backdrop */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+          onClick={() => setIsOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
       <nav
         className="fixed left-0 right-0 top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm"
         aria-label="Hauptnavigation"

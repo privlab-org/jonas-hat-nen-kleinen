@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
-import { Clock, Calendar, Phone, Mail } from "lucide-react";
+import { Clock, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const OpeningHours = () => {
@@ -32,9 +32,7 @@ const OpeningHours = () => {
             <h1 className="mb-6 text-4xl font-bold sm:text-5xl">
               <span className="text-gradient">Öffnungszeiten</span>
             </h1>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Wir sind für Sie da – zu Zeiten, die sich Ihrem Alltag anpassen.
-            </p>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">Wir sind für Sie da.</p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-2">
@@ -73,40 +71,27 @@ const OpeningHours = () => {
               </div>
             </div>
 
-            {/* Contact Info Card */}
+            {/* Welcome Card */}
             <div className="space-y-8">
               <div className="rounded-2xl border border-border bg-card p-8 shadow-lg">
-                <h2 className="mb-6 text-2xl font-semibold">Kontaktinformationen</h2>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-muted">
-                      <Phone className="h-6 w-6 text-secondary" aria-hidden="true" />
-                    </div>
-                    <div>
-                      <p className="mb-1 font-medium">Telefon</p>
-                      <a
-                        href="tel:+49123456789"
-                        className="text-muted-foreground transition-colors hover:text-secondary"
-                      >
-                        0123 456 789
-                      </a>
-                    </div>
+                <div className="space-y-4 text-muted-foreground">
+                  <p className="leading-relaxed">
+                    <span className="font-semibold text-foreground">Bitte beachten Sie:</span> Wir
+                    arbeiten ausschließlich nach Terminvereinbarung, um Ihnen die bestmögliche
+                    Betreuung zu garantieren und Wartezeiten zu vermeiden.
+                  </p>
+                  <div className="rounded-xl bg-secondary/10 p-4">
+                    <p className="text-sm font-medium text-secondary">
+                      💡 Tipp: Buchen Sie Ihren Termin bequem online – schnell, einfach und rund um
+                      die Uhr!
+                    </p>
                   </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-muted">
-                      <Mail className="h-6 w-6 text-secondary" aria-hidden="true" />
-                    </div>
-                    <div>
-                      <p className="mb-1 font-medium">E-Mail</p>
-                      <a
-                        href="mailto:info@physiovio.de"
-                        className="text-muted-foreground transition-colors hover:text-secondary"
-                      >
-                        info@physiovio.de
-                      </a>
-                    </div>
-                  </div>
+                  <Link
+                    to="/booking"
+                    className="inline-flex w-full items-center justify-center rounded-xl bg-secondary px-6 py-3 font-medium text-white transition-colors hover:bg-secondary/90"
+                  >
+                    Jetzt Termin buchen
+                  </Link>
                 </div>
               </div>
 

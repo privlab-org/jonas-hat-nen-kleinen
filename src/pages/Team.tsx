@@ -12,22 +12,22 @@ const Team = () => {
     {
       name: "Dr. Prof. Jonas",
       role: "Leitender Physiotherapeut",
-      specialization: "Alles was mit Bewegung zu tun hat",
-      description: "Der jüngste Professor der Welt mit 42 Jahren Erfahrung",
+      specialization: "Schwanz Massagen",
+      description: "30 Jahre Jung, 45 Jahre Berufserfahrung",
       image: teamJonas,
     },
     {
       name: "Dr. Prof. Jonas sein Vater",
       role: "Senior Physiotherapeut",
-      specialization: "Hat Jonas alles beigebracht",
-      description: "Legendary Therapeut der alten Schule - kann alles heilen außer seinen Rücken",
+      specialization: "Spielt Jäger in WOW.",
+      description: "Raid: 2x Täglich 18 mal die Woche.",
       image: teamVater,
     },
     {
       name: "Dr. Prof. Jonas seine Oma",
       role: "Oberste Physiotherapeutin",
-      specialization: "Weisheit & Kekse",
-      description: "85 Jahre jung, kennt alle Tricks seit 1952. Warme Wickel sind ihre Geheimwaffe",
+      specialization: "Nur Deko.",
+      description: "Kann sich kaum noch bewegen.",
       image: teamOma,
     },
   ];

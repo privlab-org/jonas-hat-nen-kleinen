@@ -164,17 +164,6 @@ const Datenschutz = () => {
 
               <div className="border-t border-border pt-6 text-sm text-muted-foreground">
                 <p>Stand: Januar 2025</p>
-                <p className="mt-2">
-                  Quelle:{" "}
-                  <a
-                    href="https://www.e-recht24.de"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary hover:underline"
-                  >
-                    e-recht24.de
-                  </a>
-                </p>
               </div>
             </div>
           </div>

@@ -56,12 +56,11 @@ const Booking = () => {
               <Calendar className="mx-auto mb-4 h-16 w-16 text-secondary" aria-hidden="true" />
               <h2 className="mb-3 text-2xl font-semibold">Terminbuchungs-Widget</h2>
               <p className="mx-auto mb-6 max-w-md text-muted-foreground">
-                Hier wird Ihr externes JavaScript für die Terminbuchung eingebunden. Der Bereich ist
-                vorbereitet für die Integration.
+                Hier kommt die Oberfläche von Optica Viva rein.
               </p>
               <div className="inline-block rounded-lg border border-border bg-background px-4 py-2">
                 <code className="text-sm text-muted-foreground">
-                  {`<!-- Externes Booking-Script hier einfügen -->`}
+                  {`<!-- Externes Script hier -->`}
                 </code>
               </div>
             </div>
