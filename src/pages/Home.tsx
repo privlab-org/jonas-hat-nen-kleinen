@@ -3,6 +3,7 @@ import { ArrowRight, Heart, Users, Clock, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-image.png";
 import hero2Image from "@/assets/hero2-image.png";
 import Navigation from "@/components/Navigation";
+import OpeningBanner from "@/components/OpeningBanner";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 
@@ -11,8 +12,11 @@ const Home = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20">
+      {/* Opening Banner - Full Screen → Sticky */}
+      <OpeningBanner />
+
+      {/* Hero Section - Kommt durch wenn Banner schrumpft */}
+      <section className="relative overflow-hidden">
         <div className="gradient-soft absolute inset-0 opacity-50" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -33,17 +37,20 @@ const Home = () => {
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
-                  to="/booking"
-                  className="inline-flex items-center justify-center rounded-xl bg-secondary px-10 py-5 text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-secondary/90 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+                  to="/services"
+                  className="group inline-flex items-center justify-center rounded-xl bg-secondary px-10 py-5 text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-secondary/90 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
                 >
-                  Jetzt Termin vereinbaren
-                  <ArrowRight className="ml-2 h-6 w-6" aria-hidden="true" />
+                  Unsere Leistungen
+                  <ArrowRight
+                    className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
                 </Link>
                 <Link
-                  to="/team"
+                  to="/contact"
                   className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-8 py-4 font-semibold text-foreground transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
                 >
-                  Unser Team kennenlernen
+                  Kontakt aufnehmen
                 </Link>
               </div>
             </div>
@@ -60,26 +67,6 @@ const Home = () => {
                 width="800"
                 height="600"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Neueröffnung Banner - Zwischen Hero und Features */}
-      <section className="relative bg-tertiary py-6">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-4 text-center">
-            <span className="relative flex h-3 w-3">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary opacity-75"></span>
-              <span className="relative inline-flex h-3 w-3 rounded-full bg-secondary"></span>
-            </span>
-            <div>
-              <p className="text-lg font-bold text-primary sm:text-xl">
-                Neueröffnung ab 1. Januar 2026
-              </p>
-              <p className="text-sm text-primary/80">
-                Sichern Sie sich jetzt schon Ihren Wunschtermin!
-              </p>
             </div>
           </div>
         </div>
@@ -181,18 +168,21 @@ const Home = () => {
         <div className="gradient-soft absolute inset-0" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 id="cta-heading" className="mb-6 text-3xl font-bold sm:text-4xl">
-            Bereit für den ersten Schritt?
+            Haben Sie Fragen?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
-            Vereinbaren Sie noch heute einen Termin und starten Sie Ihre persönliche Genesungsreise
-            mit uns.
+            Kontaktieren Sie uns gerne - wir beraten Sie persönlich und beantworten alle Ihre Fragen
+            zur Physiotherapie.
           </p>
           <Link
-            to="/booking"
-            className="inline-flex items-center justify-center rounded-xl bg-secondary px-8 py-4 font-semibold text-white transition-all hover:scale-105 hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+            to="/contact"
+            className="group inline-flex items-center justify-center rounded-xl bg-secondary px-8 py-4 font-semibold text-white transition-all hover:scale-105 hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
           >
-            Termin vereinbaren
-            <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+            Jetzt Kontakt aufnehmen
+            <ArrowRight
+              className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
+              aria-hidden="true"
+            />
           </Link>
         </div>
       </section>
