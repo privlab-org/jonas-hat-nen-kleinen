@@ -27,9 +27,9 @@ const Impressum = () => {
                   <br />
                   Max Mustermann
                   <br />
-                  Musterstraße 123
+                  Neunaigenerstraße 1
                   <br />
-                  12345 Musterstadt
+                  92533 Wernberg-Köblitz
                 </p>
               </section>
 

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const NotFound = () => {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="flex min-h-screen flex-col bg-gradient-to-b from-tertiary/5 via-secondary/5 to-muted/10">
       <Navigation />
 
       <main
@@ -44,7 +44,7 @@ const NotFound = () => {
             </Button>
           </div>
 
-          <div className="mt-12 rounded-xl border border-border bg-muted/50 p-6">
+          <div className="mt-12 rounded-xl border border-tertiary/30 bg-gradient-to-br from-tertiary/15 via-secondary/10 to-tertiary/15 p-6">
             <h2 className="mb-3 text-lg font-semibold">Schnellzugriff</h2>
             <div className="flex flex-wrap justify-center gap-3">
               <Link to="/team" className="text-sm text-secondary hover:underline">
@@ -53,8 +53,8 @@ const NotFound = () => {
               <span className="text-muted-foreground" aria-hidden="true">
                 •
               </span>
-              <Link to="/opening-hours" className="text-sm text-secondary hover:underline">
-                Öffnungszeiten
+              <Link to="/services" className="text-sm text-secondary hover:underline">
+                Leistungen
               </Link>
               <span className="text-muted-foreground" aria-hidden="true">
                 •

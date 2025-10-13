@@ -8,7 +8,10 @@ const Booking = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <main id="main-content" className="pb-20 pt-32">
+      <main
+        id="main-content"
+        className="bg-gradient-to-b from-tertiary/5 via-secondary/5 to-transparent pb-20 pt-32"
+      >
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mb-16 animate-fade-in text-center">
@@ -68,7 +71,7 @@ const Booking = () => {
 
           {/* How it Works */}
           <div className="mb-12 grid gap-8 md:grid-cols-3">
-            <div className="rounded-xl border border-border bg-card p-6 text-center">
+            <div className="via-tertiary/8 rounded-xl border border-tertiary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-6 text-center backdrop-blur-sm">
               <div
                 className="gradient-primary mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full"
                 aria-hidden="true"
@@ -81,7 +84,7 @@ const Booking = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border border-border bg-card p-6 text-center">
+            <div className="via-tertiary/8 rounded-xl border border-tertiary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-6 text-center backdrop-blur-sm">
               <div
                 className="gradient-primary mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full"
                 aria-hidden="true"
@@ -94,7 +97,7 @@ const Booking = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border border-border bg-card p-6 text-center">
+            <div className="via-tertiary/8 rounded-xl border border-tertiary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-6 text-center backdrop-blur-sm">
               <div
                 className="gradient-primary mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full"
                 aria-hidden="true"
@@ -109,7 +112,7 @@ const Booking = () => {
           </div>
 
           {/* Alternative Contact */}
-          <div className="gradient-soft rounded-2xl border border-border p-8 text-center">
+          <div className="gradient-soft rounded-2xl border border-tertiary/40 bg-gradient-to-br from-tertiary/20 via-secondary/10 to-tertiary/20 p-8 text-center ring-2 ring-tertiary/10">
             <Clock className="mx-auto mb-4 h-10 w-10 text-secondary" aria-hidden="true" />
             <h3 className="mb-3 text-xl font-semibold">Lieber telefonisch buchen?</h3>
             <p className="mx-auto mb-6 max-w-2xl text-muted-foreground">

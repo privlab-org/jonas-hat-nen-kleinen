@@ -101,7 +101,10 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <main id="main-content" className="pb-20 pt-32">
+      <main
+        id="main-content"
+        className="bg-gradient-to-b from-tertiary/5 via-transparent to-transparent pb-20 pt-32"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mb-16 animate-fade-in text-center">
@@ -119,49 +122,45 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group rounded-2xl border border-border bg-card shadow-lg transition-all duration-300 hover:border-secondary/50 hover:shadow-xl"
+                className="via-tertiary/8 group overflow-hidden rounded-2xl border border-secondary/20 bg-gradient-to-r from-card/90 to-card/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-tertiary/50 hover:from-tertiary/10 hover:via-secondary/10 hover:to-tertiary/10 hover:shadow-xl"
               >
                 {/* Header - Immer sichtbar, klickbar */}
                 <button
                   onClick={() => toggleService(index)}
-                  className="flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-secondary/5"
+                  className="flex w-full items-center justify-between gap-3 rounded-l-2xl border-l-4 border-secondary/40 p-4 text-left transition-all hover:border-secondary hover:bg-gradient-to-r hover:from-tertiary/15 hover:to-secondary/10 sm:gap-4 sm:p-6"
                 >
-                  <div className="flex items-center gap-4">
-                    <div
-                      className="gradient-primary inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
-                      aria-hidden="true"
-                    >
-                      <service.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold transition-colors group-hover:text-secondary">
-                      {service.title}
-                    </h3>
-                  </div>
+                  <h3 className="text-base font-bold transition-colors group-hover:text-secondary sm:text-xl">
+                    {service.title}
+                  </h3>
                   <ChevronDown
-                    className={`h-6 w-6 flex-shrink-0 text-muted-foreground transition-transform duration-300 ${
+                    className={`h-5 w-5 flex-shrink-0 text-muted-foreground transition-transform duration-300 sm:h-6 sm:w-6 ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                   />
                 </button>
 
-                {/* Content - Smooth Animation beim Öffnen/Schließen */}
+                {/* Content - Smoother & synchrone Animation */}
                 <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    openIndex === index ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+                  className={`grid transition-all duration-300 ease-out ${
+                    openIndex === index
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
-                  <div className="border-t border-border px-6 pb-6 pt-4">
-                    <p className="mb-6 leading-relaxed text-muted-foreground">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm">
-                          <div className="mr-2 h-1.5 w-1.5 rounded-full bg-secondary"></div>
-                          <span className="text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="overflow-hidden">
+                    <div className="border-t border-border px-6 pb-6 pt-4">
+                      <p className="mb-6 leading-relaxed text-muted-foreground">
+                        {service.description}
+                      </p>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-sm">
+                            <div className="mr-2 h-1.5 w-1.5 rounded-full bg-secondary"></div>
+                            <span className="text-muted-foreground">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -169,7 +168,7 @@ const Services = () => {
           </div>
 
           {/* Info Box */}
-          <div className="gradient-soft rounded-2xl border border-border p-8 text-center">
+          <div className="gradient-soft rounded-2xl border border-secondary/30 bg-gradient-to-br from-tertiary/20 via-secondary/10 to-muted/20 p-8 text-center shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Individuelle Beratung gewünscht?</h2>
             <p className="mx-auto mb-6 max-w-2xl text-muted-foreground">
               Jeder Patient ist einzigartig. Gerne beraten wir Sie persönlich, welche
@@ -178,32 +177,16 @@ const Services = () => {
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link
                 to="/booking"
-                className="inline-flex items-center justify-center rounded-xl bg-secondary px-8 py-3 font-medium text-white transition-colors hover:bg-secondary/90"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-secondary to-tertiary/70 px-8 py-3 font-medium text-white transition-all hover:from-secondary/90 hover:to-tertiary/80"
               >
                 Jetzt Termin buchen
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center rounded-xl border-2 border-secondary bg-transparent px-8 py-3 font-medium text-secondary transition-colors hover:bg-secondary/10"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-tertiary/50 bg-gradient-to-r from-tertiary/10 to-secondary/10 px-8 py-3 font-medium text-secondary transition-all hover:border-tertiary/70 hover:from-tertiary/20 hover:to-secondary/20"
               >
                 Kontakt aufnehmen
               </Link>
-            </div>
-          </div>
-
-          {/* Additional Info */}
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <div className="rounded-xl border border-border bg-card p-6 text-center">
-              <div className="mb-3 text-3xl font-bold text-secondary">10+</div>
-              <p className="text-sm font-medium">Jahre Erfahrung</p>
-            </div>
-            <div className="rounded-xl border border-border bg-card p-6 text-center">
-              <div className="mb-3 text-3xl font-bold text-secondary">1000+</div>
-              <p className="text-sm font-medium">Zufriedene Patienten</p>
-            </div>
-            <div className="rounded-xl border border-border bg-card p-6 text-center">
-              <div className="mb-3 text-3xl font-bold text-secondary">10</div>
-              <p className="text-sm font-medium">Behandlungsmethoden</p>
             </div>
           </div>
         </div>

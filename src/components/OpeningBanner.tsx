@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const OpeningBanner = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -29,12 +29,25 @@ const OpeningBanner = () => {
   // Zeige Subtitle + Button nur wenn Höhe > 300px
   const showExtras = currentHeight > HIDE_EXTRAS_HEIGHT;
 
-  // Ping verschwindet im Endzustand (bei MIN_HEIGHT)
-  const showPing = currentHeight > MIN_HEIGHT;
+  // Logo verschwindet im Endzustand (bei MIN_HEIGHT)
+  const showLogo = currentHeight > MIN_HEIGHT;
 
-  // Dynamische Größen
-  const pingSize = 32 - progress * 16; // 32px → 16px
-  const titleSize = 7 - progress * 5.875; // 7rem → 1.125rem
+  // justify-center nur im Endzustand (minimiert)
+  const isMinimized = currentHeight <= MIN_HEIGHT;
+
+  // Dynamische Größen - LOGO 3x GRÖSSER!
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
+  const logoWidth = isMobile ? 180 - progress * 148 : 600 - progress * 568; // Mobile: 180px → 32px, Desktop: 600px → 32px (3x größer!)
+  const logoHeight = isMobile ? 90 - progress * 58 : 300 - progress * 268; // Mobile: 90px → 32px, Desktop: 300px → 32px (Höhe begrenzt!)
+  const titleSize = isMobile ? 3 - progress * 1.875 : 7 - progress * 5.875; // Mobile: 3rem → 1.125rem, Desktop: 7rem → 1.125rem
+
+  // Scroll zum Hero Bereich - Normal
+  const scrollToHero = () => {
+    const heroSection = document.getElementById("hero-section");
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <>
@@ -51,48 +64,49 @@ const OpeningBanner = () => {
           aria-hidden="true"
         />
 
-        {/* Single Content - scales down on scroll */}
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 px-4">
-          {/* Animated Ping Indicator - verschwindet im Endzustand */}
-          {showPing && (
-            <span
-              className="relative flex"
-              style={{ width: `${pingSize}px`, height: `${pingSize}px` }}
-            >
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary opacity-75"></span>
-              <span className="relative inline-flex h-full w-full rounded-full bg-secondary"></span>
-            </span>
+        {/* Single Content - scales down on scroll - justify-center nur im Endzustand */}
+        <div
+          className={`absolute inset-0 z-10 flex flex-col items-center gap-4 px-4 py-2 ${isMinimized ? "justify-center" : "justify-start"}`}
+        >
+          {/* Logo - verschwindet im Endzustand */}
+          {showLogo && (
+            <img
+              src={logo}
+              alt="PHYSIO VIO Logo"
+              className="mb-1 object-contain"
+              style={{ width: `${logoWidth}px`, height: `${logoHeight}px` }}
+            />
           )}
 
           {/* Main Banner Content - font size scales down */}
-          <div className="space-y-2 text-center">
+          <div className="space-y-3 text-center">
             <h1
-              className="font-black tracking-tight text-primary"
+              className="px-4 font-black tracking-tight text-primary"
               style={{ fontSize: `${titleSize}rem`, lineHeight: 1.1 }}
             >
-              🎉 Neueröffnung ab 1 Januar 2026
+              Neueröffnung ab 1 Januar 2026
             </h1>
 
             {/* Subtitle - Verschwindet bei 300px Höhe */}
             {showExtras && (
-              <p className="text-xl font-semibold text-primary/90">
+              <p className="px-4 text-base font-semibold text-primary/90 sm:text-xl">
                 Sichern Sie sich jetzt schon Ihren Wunschtermin!
               </p>
             )}
           </div>
 
-          {/* CTA Button - Verschwindet bei 300px Höhe */}
+          {/* Scroll Button - Verschwindet bei 300px Höhe */}
           {showExtras && (
-            <Link
-              to="/booking"
-              className="group inline-flex items-center justify-center rounded-xl bg-secondary px-8 py-4 font-bold text-white shadow-xl hover:bg-secondary/90 focus:outline-none focus:ring-4 focus:ring-secondary/50 focus:ring-offset-2"
+            <button
+              onClick={scrollToHero}
+              className="group mt-6 inline-flex items-center justify-center rounded-xl bg-secondary px-8 py-4 font-bold text-white shadow-xl hover:bg-secondary/90 focus:outline-none focus:ring-4 focus:ring-secondary/50 focus:ring-offset-2"
             >
-              Jetzt vormerken
-              <ArrowRight
-                className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
+              Erfahre mehr
+              <ChevronDown
+                className="ml-2 h-5 w-5 transition-transform group-hover:translate-y-1"
                 aria-hidden="true"
               />
-            </Link>
+            </button>
           )}
         </div>
       </div>

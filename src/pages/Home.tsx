@@ -16,12 +16,15 @@ const Home = () => {
       <OpeningBanner />
 
       {/* Hero Section - Kommt durch wenn Banner schrumpft */}
-      <section className="relative overflow-hidden">
-        <div className="gradient-soft absolute inset-0 opacity-50" aria-hidden="true" />
-        <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <section id="hero-section" className="relative overflow-hidden">
+        <div className="gradient-soft absolute inset-0 opacity-60" aria-hidden="true" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-8 lg:pb-24 lg:pt-40">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="animate-fade-in space-y-8">
-              <div className="inline-block rounded-full bg-muted px-4 py-2" role="status">
+            <div className="animate-fade-in space-y-6 text-center lg:space-y-8 lg:text-left">
+              <div
+                className="mt-5 inline-block rounded-full border border-secondary/20 bg-secondary/10 px-4 py-2 pt-[5px] lg:mt-0 lg:pt-2"
+                role="status"
+              >
                 <span className="text-sm font-medium text-secondary">
                   Ihre Gesundheit, unser Ziel
                 </span>
@@ -31,14 +34,14 @@ const Home = () => {
                 <br />
                 zur Genesung
               </h1>
-              <p className="max-w-xl text-lg text-muted-foreground">
+              <p className="mx-auto max-w-xl text-lg text-muted-foreground lg:mx-0">
                 Wir begleiten Sie auf diesem Weg – professionell, individuell und mit Herz. Ihre
                 aktive Mitarbeit macht den Unterschied.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
                   to="/services"
-                  className="group inline-flex items-center justify-center rounded-xl bg-secondary px-10 py-5 text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-secondary/90 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+                  className="group inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-secondary to-secondary/90 px-10 py-5 text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:from-secondary/90 hover:to-tertiary/80 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
                 >
                   Unsere Leistungen
                   <ArrowRight
@@ -47,10 +50,10 @@ const Home = () => {
                   />
                 </Link>
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-8 py-4 font-semibold text-foreground transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+                  to="/booking"
+                  className="inline-flex items-center justify-center rounded-xl border-2 border-tertiary/40 bg-gradient-to-r from-tertiary/10 to-secondary/10 px-8 py-4 font-semibold text-foreground transition-all hover:border-tertiary/60 hover:from-tertiary/20 hover:to-secondary/20 focus:outline-none focus:ring-2 focus:ring-tertiary focus:ring-offset-2"
                 >
-                  Kontakt aufnehmen
+                  Termin buchen
                 </Link>
               </div>
             </div>
@@ -73,9 +76,9 @@ const Home = () => {
       </section>
 
       {/* Features Section - Creative Asymmetric Layout */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
+      <section className="relative overflow-hidden bg-tertiary/5 py-20 lg:py-32">
         {/* Decorative Background */}
-        <div className="gradient-soft absolute inset-0 opacity-30" aria-hidden="true" />
+        <div className="gradient-soft absolute inset-0 opacity-40" aria-hidden="true" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Centered Header */}
@@ -109,7 +112,7 @@ const Home = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-secondary/50 hover:bg-secondary/5 hover:shadow-2xl"
+                className="group relative overflow-hidden rounded-2xl border border-secondary/20 bg-gradient-to-br from-card/90 via-tertiary/5 to-secondary/5 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-tertiary/50 hover:from-tertiary/10 hover:via-secondary/10 hover:to-card/90 hover:shadow-2xl"
               >
                 <div className="relative">
                   {/* Icon - Back to Original Style */}
@@ -144,7 +147,7 @@ const Home = () => {
             </div>
 
             {/* 4th Feature Card */}
-            <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-secondary/50 hover:bg-secondary/5 hover:shadow-2xl sm:col-span-2 lg:col-span-1">
+            <div className="group relative overflow-hidden rounded-2xl border border-secondary/20 bg-gradient-to-br from-card/90 via-tertiary/5 to-secondary/5 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-tertiary/50 hover:from-tertiary/10 hover:via-secondary/10 hover:to-card/90 hover:shadow-2xl sm:col-span-2 lg:col-span-1">
               <div className="relative">
                 <div
                   className="gradient-primary mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
@@ -164,8 +167,11 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden py-20" aria-labelledby="cta-heading">
-        <div className="gradient-soft absolute inset-0" aria-hidden="true" />
+      <section
+        className="relative overflow-hidden bg-gradient-to-br from-tertiary/10 via-secondary/5 to-muted/20 py-20"
+        aria-labelledby="cta-heading"
+      >
+        <div className="gradient-soft absolute inset-0 opacity-50" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 id="cta-heading" className="mb-6 text-3xl font-bold sm:text-4xl">
             Haben Sie Fragen?
@@ -176,7 +182,7 @@ const Home = () => {
           </p>
           <Link
             to="/contact"
-            className="group inline-flex items-center justify-center rounded-xl bg-secondary px-8 py-4 font-semibold text-white transition-all hover:scale-105 hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+            className="group inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-secondary via-secondary to-tertiary/70 px-8 py-4 font-semibold text-white transition-all hover:scale-105 hover:from-secondary/90 hover:via-tertiary/80 hover:to-tertiary/90 focus:outline-none focus:ring-2 focus:ring-tertiary focus:ring-offset-2"
           >
             Jetzt Kontakt aufnehmen
             <ArrowRight

@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
-import { Mail, Phone, MapPin, Clock, Calendar } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Calendar, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const hours = [
@@ -18,7 +18,10 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <main id="main-content" className="pb-20 pt-32">
+      <main
+        id="main-content"
+        className="bg-gradient-to-b from-tertiary/5 via-secondary/5 to-muted/10 pb-20 pt-32"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mb-16 animate-fade-in text-center">
@@ -32,7 +35,7 @@ const Contact = () => {
           </div>
 
           {/* Öffnungszeiten Section */}
-          <div className="mb-12 rounded-2xl border border-border bg-card p-8 shadow-lg">
+          <div className="mb-12 rounded-2xl border border-tertiary/40 bg-gradient-to-br from-card/90 via-tertiary/10 to-secondary/5 p-8 shadow-lg ring-2 ring-tertiary/10 backdrop-blur-sm">
             <div className="mb-6 flex items-center justify-center">
               <div
                 className="gradient-primary mr-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl"
@@ -49,23 +52,29 @@ const Contact = () => {
                 {hours.map((item, index) => (
                   <div
                     key={index}
-                    className={`flex items-center justify-between rounded-lg px-6 py-4 ${
+                    className={`flex items-center justify-between rounded-lg px-4 py-3 sm:px-6 sm:py-4 ${
                       item.time === "Geschlossen"
-                        ? "bg-muted/50"
-                        : "bg-muted transition-colors hover:bg-muted/80"
+                        ? "bg-muted/30"
+                        : "border border-tertiary/20 bg-gradient-to-r from-tertiary/15 via-secondary/10 to-tertiary/15 transition-all hover:border-tertiary/30 hover:from-tertiary/20 hover:via-secondary/15 hover:to-tertiary/20"
                     }`}
                     role="row"
                   >
-                    <span className="flex items-center font-medium" role="cell">
-                      <Calendar className="mr-3 h-5 w-5 text-secondary" aria-hidden="true" />
+                    <span
+                      className="flex items-center text-sm font-medium sm:text-base"
+                      role="cell"
+                    >
+                      <Calendar
+                        className="mr-2 h-4 w-4 text-secondary sm:mr-3 sm:h-5 sm:w-5"
+                        aria-hidden="true"
+                      />
                       {item.day}
                     </span>
                     <span
-                      className={
+                      className={`text-sm sm:text-base ${
                         item.time === "Geschlossen"
                           ? "text-muted-foreground"
                           : "font-semibold text-secondary"
-                      }
+                      }`}
                       role="cell"
                     >
                       {item.time}
@@ -73,7 +82,7 @@ const Contact = () => {
                   </div>
                 ))}
               </div>
-              <div className="mt-6 rounded-xl bg-secondary/10 p-4 text-center">
+              <div className="mt-6 rounded-xl border border-tertiary/40 bg-gradient-to-r from-tertiary/30 via-secondary/20 to-tertiary/30 p-4 text-center ring-2 ring-tertiary/10">
                 <p className="text-sm font-medium text-secondary">
                   💡 Termine nur nach Vereinbarung – Buchen Sie online oder rufen Sie uns an!
                 </p>
@@ -81,78 +90,117 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Kontaktinformationen - Zentriert, ohne Formular */}
-          <div className="mx-auto max-w-4xl space-y-8">
-            {/* Contact Information */}
-            <div className="rounded-2xl border border-border bg-card p-8 shadow-lg">
-              <h2 className="mb-6 text-2xl font-semibold">Kontaktinformationen</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="gradient-primary flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl">
-                    <MapPin className="h-6 w-6 text-white" aria-hidden="true" />
+          {/* Kontaktinformationen & Google Maps - Nebeneinander auf Desktop */}
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-8 lg:grid-cols-2">
+              {/* Contact Information */}
+              <div className="via-tertiary/8 flex flex-col rounded-2xl border border-tertiary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-8 shadow-lg backdrop-blur-sm">
+                <h2 className="mb-6 text-2xl font-semibold">Kontaktinformationen</h2>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="gradient-primary flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl">
+                      <MapPin className="h-6 w-6 text-white" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="mb-1 font-medium">Adresse</p>
+                      <address className="not-italic text-muted-foreground">
+                        Physio VIO
+                        <br />
+                        Neunaigenerstraße 1
+                        <br />
+                        92533 Wernberg-Köblitz
+                      </address>
+                    </div>
                   </div>
-                  <div>
-                    <p className="mb-1 font-medium">Adresse</p>
-                    <address className="not-italic text-muted-foreground">
-                      Metzgerei Vogel GmbH
-                      <br />
-                      Alte Dorfstraße 35 • Ursulapoppenricht
-                      <br />
-                      92256 Hahnbach
-                    </address>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="gradient-primary flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl">
+                      <Phone className="h-6 w-6 text-white" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="mb-1 font-medium">Telefon</p>
+                      <a
+                        href="tel:+49123456789"
+                        className="text-muted-foreground transition-colors hover:text-secondary"
+                      >
+                        0123 456 789
+                      </a>
+                      <p className="mt-1 text-sm text-muted-foreground">Mo-Fr: 08:00 - 18:00 Uhr</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="gradient-primary flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl">
+                      <Mail className="h-6 w-6 text-white" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="mb-1 font-medium">E-Mail</p>
+                      <a
+                        href="mailto:info@physiovio.de"
+                        className="text-muted-foreground transition-colors hover:text-secondary"
+                      >
+                        info@physiovio.de
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* WhatsApp Info - NEU */}
+                  <div className="flex items-start space-x-4">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#25D366] to-[#128C7E]">
+                      <MessageCircle className="h-6 w-6 text-white" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="mb-1 font-medium">WhatsApp</p>
+                      <a
+                        href="https://wa.me/49123456789"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground transition-colors hover:text-secondary"
+                      >
+                        0123 456 789
+                      </a>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        Schnelle Antworten per Chat
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="gradient-primary flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl">
-                    <Phone className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="mb-1 font-medium">Telefon</p>
-                    <a
-                      href="tel:+49123456789"
-                      className="text-muted-foreground transition-colors hover:text-secondary"
-                    >
-                      0123 456 789
-                    </a>
-                    <p className="mt-1 text-sm text-muted-foreground">Mo-Fr: 08:00 - 18:00 Uhr</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="gradient-primary flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl">
-                    <Mail className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="mb-1 font-medium">E-Mail</p>
-                    <a
-                      href="mailto:info@physiovio.de"
-                      className="text-muted-foreground transition-colors hover:text-secondary"
-                    >
-                      info@physiovio.de
-                    </a>
+                {/* WhatsApp Banner Info */}
+                <div className="mt-6 rounded-xl border border-[#25D366]/30 bg-gradient-to-r from-[#25D366]/10 to-[#128C7E]/10 p-4">
+                  <div className="flex items-start gap-3">
+                    <MessageCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#25D366]" />
+                    <div className="text-sm">
+                      <p className="font-medium text-foreground">
+                        💬 Nutzen Sie unseren WhatsApp-Service!
+                      </p>
+                      <p className="mt-1 text-muted-foreground">
+                        Klicken Sie auf das grüne WhatsApp-Symbol rechts unten für direkten
+                        Chat-Support. Schnell, unkompliziert und zu jeder Zeit!
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              {/* Google Maps Integration */}
+              <div className="flex flex-col overflow-hidden rounded-2xl border border-tertiary/40 shadow-lg ring-2 ring-tertiary/10">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2579.9876543!2d12.1455665!3d49.5365331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a023512e88af57%3A0x9cd23eab9559cace!2sNeunaigener%20Str.%201%2C%2092533%20Wernberg-K%C3%B6blitz!5e0!3m2!1sde!2sde!4v1728567890123"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: "400px" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Maps Standort: Neunaigenerstraße 1, 92533 Wernberg-Köblitz"
+                  className="grayscale transition-all duration-300 hover:grayscale-0"
+                ></iframe>
+              </div>
             </div>
 
-            {/* Google Maps Integration */}
-            <div className="overflow-hidden rounded-2xl border border-border shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2588.7890123456!2d11.825678!3d49.628901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f3e1234567890%3A0x1234567890abcdef!2sAlte%20Dorfstra%C3%9Fe%2035%2C%2092256%20Hahnbach!5e0!3m2!1sde!2sde!4v1728567890123"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps Standort: Alte Dorfstraße 35, Ursulapoppenricht, 92256 Hahnbach"
-                className="grayscale transition-all duration-300 hover:grayscale-0"
-              ></iframe>
-            </div>
-
-            {/* Quick Info */}
-            <div className="gradient-soft rounded-2xl border border-border p-6">
+            {/* Quick Info - Volle Breite unter Grid */}
+            <div className="gradient-soft rounded-2xl border border-tertiary/40 bg-gradient-to-br from-tertiary/30 via-secondary/15 to-tertiary/25 p-6 ring-2 ring-tertiary/10">
               <h3 className="mb-2 font-semibold">Anfahrt</h3>
               <p className="text-sm text-muted-foreground">
                 Kostenlose Parkplätze direkt vor der Praxis. Mit öffentlichen Verkehrsmitteln: Bus
