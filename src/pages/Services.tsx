@@ -103,7 +103,7 @@ const Services = () => {
 
       <main
         id="main-content"
-        className="bg-gradient-to-b from-tertiary/5 via-transparent to-transparent pb-20 pt-32"
+        className="bg-gradient-to-b from-secondary/5 via-transparent to-transparent pb-20 pt-32"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -122,12 +122,12 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="via-tertiary/8 group overflow-hidden rounded-2xl border border-secondary/20 bg-gradient-to-r from-card/90 to-card/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-tertiary/50 hover:from-tertiary/10 hover:via-secondary/10 hover:to-tertiary/10 hover:shadow-xl"
+                className="via-secondary/8 group overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-r from-card/90 to-card/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-secondary/50 hover:from-secondary/10 hover:via-secondary/15 hover:to-secondary/10 hover:shadow-xl"
               >
                 {/* Header - Immer sichtbar, klickbar */}
                 <button
                   onClick={() => toggleService(index)}
-                  className="flex w-full items-center justify-between gap-3 rounded-l-2xl border-l-4 border-secondary/40 p-4 text-left transition-all hover:border-secondary hover:bg-gradient-to-r hover:from-tertiary/15 hover:to-secondary/10 sm:gap-4 sm:p-6"
+                  className="flex w-full items-center justify-between gap-3 rounded-l-2xl border-l-4 border-secondary/40 p-4 text-left transition-all hover:border-secondary hover:bg-gradient-to-r hover:from-secondary/15 hover:to-secondary/10 sm:gap-4 sm:p-6"
                 >
                   <h3 className="text-base font-bold transition-colors group-hover:text-secondary sm:text-xl">
                     {service.title}
@@ -168,7 +168,7 @@ const Services = () => {
           </div>
 
           {/* Info Box */}
-          <div className="gradient-soft rounded-2xl border border-secondary/30 bg-gradient-to-br from-tertiary/20 via-secondary/10 to-muted/20 p-8 text-center shadow-lg">
+          <div className="gradient-soft rounded-2xl border border-secondary/30 bg-gradient-to-br from-secondary/20 via-secondary/15 to-secondary/25 p-8 text-center shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Individuelle Beratung gewünscht?</h2>
             <p className="mx-auto mb-6 max-w-2xl text-muted-foreground">
               Jeder Patient ist einzigartig. Gerne beraten wir Sie persönlich, welche
@@ -176,16 +176,16 @@ const Services = () => {
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link
-                to="/booking"
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-secondary to-tertiary/70 px-8 py-3 font-medium text-white transition-all hover:from-secondary/90 hover:to-tertiary/80"
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary to-primary/90 px-8 py-3 font-semibold text-white shadow-lg transition-all hover:scale-105 hover:from-primary/90 hover:to-secondary hover:shadow-xl"
               >
-                Jetzt Termin buchen
+                Jetzt Termin vereinbaren
               </Link>
               <Link
-                to="/contact"
-                className="inline-flex items-center justify-center rounded-xl border-2 border-tertiary/50 bg-gradient-to-r from-tertiary/10 to-secondary/10 px-8 py-3 font-medium text-secondary transition-all hover:border-tertiary/70 hover:from-tertiary/20 hover:to-secondary/20"
+                to="/team"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-secondary bg-gradient-to-r from-secondary/20 to-secondary/10 px-8 py-3 font-semibold text-primary shadow-md transition-all hover:scale-105 hover:border-secondary hover:from-secondary/30 hover:to-secondary/20 hover:shadow-lg"
               >
-                Kontakt aufnehmen
+                Unser Team kennenlernen
               </Link>
             </div>
           </div>

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Heart, Users, Clock, CheckCircle } from "lucide-react";
-import heroImage from "@/assets/hero-image.png";
-import hero2Image from "@/assets/hero2-image.png";
+import placeholderImage from "/placeholder.svg";
 import Navigation from "@/components/Navigation";
 import OpeningBanner from "@/components/OpeningBanner";
 import Footer from "@/components/Footer";
@@ -25,7 +24,7 @@ const Home = () => {
                 className="mt-5 inline-block rounded-full border border-secondary/20 bg-secondary/10 px-4 py-2 pt-[5px] lg:mt-0 lg:pt-2"
                 role="status"
               >
-                <span className="text-sm font-medium text-secondary">
+                <span className="text-sm font-medium text-primary">
                   Ihre Gesundheit, unser Ziel
                 </span>
               </div>
@@ -41,7 +40,7 @@ const Home = () => {
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
                   to="/services"
-                  className="group inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-secondary to-secondary/90 px-10 py-5 text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:from-secondary/90 hover:to-tertiary/80 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+                  className="group inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary to-primary/90 px-10 py-5 text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:from-primary/90 hover:to-secondary hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                 >
                   Unsere Leistungen
                   <ArrowRight
@@ -50,10 +49,10 @@ const Home = () => {
                   />
                 </Link>
                 <Link
-                  to="/booking"
-                  className="inline-flex items-center justify-center rounded-xl border-2 border-tertiary/40 bg-gradient-to-r from-tertiary/10 to-secondary/10 px-8 py-4 font-semibold text-foreground transition-all hover:border-tertiary/60 hover:from-tertiary/20 hover:to-secondary/20 focus:outline-none focus:ring-2 focus:ring-tertiary focus:ring-offset-2"
+                  to="/contact"
+                  className="inline-flex items-center justify-center rounded-xl border-2 border-secondary bg-gradient-to-r from-secondary/20 to-secondary/10 px-8 py-4 font-semibold text-primary shadow-md transition-all hover:scale-105 hover:border-secondary hover:from-secondary/30 hover:to-secondary/20 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
                 >
-                  Termin buchen
+                  Termin vereinbaren
                 </Link>
               </div>
             </div>
@@ -63,7 +62,7 @@ const Home = () => {
                 aria-hidden="true"
               />
               <img
-                src={heroImage}
+                src={placeholderImage}
                 alt="Moderne Physiotherapie Praxis - Helle, freundliche Behandlungsräume"
                 className="relative h-auto w-full rounded-2xl shadow-2xl"
                 loading="eager"
@@ -76,7 +75,7 @@ const Home = () => {
       </section>
 
       {/* Features Section - Creative Asymmetric Layout */}
-      <section className="relative overflow-hidden bg-tertiary/5 py-20 lg:py-32">
+      <section className="relative overflow-hidden bg-secondary/5 py-20 lg:py-32">
         {/* Decorative Background */}
         <div className="gradient-soft absolute inset-0 opacity-40" aria-hidden="true" />
 
@@ -112,7 +111,7 @@ const Home = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl border border-secondary/20 bg-gradient-to-br from-card/90 via-tertiary/5 to-secondary/5 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-tertiary/50 hover:from-tertiary/10 hover:via-secondary/10 hover:to-card/90 hover:shadow-2xl"
+                className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card/90 via-secondary/5 to-secondary/10 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-secondary/50 hover:from-secondary/10 hover:via-secondary/15 hover:to-secondary/20 hover:shadow-2xl"
               >
                 <div className="relative">
                   {/* Icon - Back to Original Style */}
@@ -138,7 +137,7 @@ const Home = () => {
                 aria-hidden="true"
               />
               <img
-                src={hero2Image}
+                src={placeholderImage}
                 alt="Professionelle Physiotherapie Behandlung"
                 className="relative h-full w-full rounded-2xl object-cover shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
                 style={{ maxHeight: "240px", objectPosition: "bottom right" }}
@@ -147,7 +146,7 @@ const Home = () => {
             </div>
 
             {/* 4th Feature Card */}
-            <div className="group relative overflow-hidden rounded-2xl border border-secondary/20 bg-gradient-to-br from-card/90 via-tertiary/5 to-secondary/5 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-tertiary/50 hover:from-tertiary/10 hover:via-secondary/10 hover:to-card/90 hover:shadow-2xl sm:col-span-2 lg:col-span-1">
+            <div className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card/90 via-secondary/5 to-secondary/10 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-secondary/50 hover:from-secondary/10 hover:via-secondary/15 hover:to-secondary/20 hover:shadow-2xl sm:col-span-2 lg:col-span-1">
               <div className="relative">
                 <div
                   className="gradient-primary mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
@@ -168,7 +167,7 @@ const Home = () => {
 
       {/* CTA Section */}
       <section
-        className="relative overflow-hidden bg-gradient-to-br from-tertiary/10 via-secondary/5 to-muted/20 py-20"
+        className="relative overflow-hidden bg-gradient-to-br from-secondary/10 via-secondary/5 to-secondary/20 py-20"
         aria-labelledby="cta-heading"
       >
         <div className="gradient-soft absolute inset-0 opacity-50" aria-hidden="true" />
@@ -182,7 +181,7 @@ const Home = () => {
           </p>
           <Link
             to="/contact"
-            className="group inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-secondary via-secondary to-tertiary/70 px-8 py-4 font-semibold text-white transition-all hover:scale-105 hover:from-secondary/90 hover:via-tertiary/80 hover:to-tertiary/90 focus:outline-none focus:ring-2 focus:ring-tertiary focus:ring-offset-2"
+            className="group inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary to-primary/90 px-8 py-4 font-semibold text-white shadow-lg transition-all hover:scale-105 hover:from-primary/90 hover:to-secondary hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
             Jetzt Kontakt aufnehmen
             <ArrowRight

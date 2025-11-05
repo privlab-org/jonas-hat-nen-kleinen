@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "/placeholder.svg";
 
 const Footer = () => {
   const openCookieSettings = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col items-center space-y-6">
           {/* Logo & Tagline */}
           <div className="text-center">
-            <img src={logo} alt="PHYSIO VIO Logo" className="mx-auto mb-3 h-12 w-auto" />
+            <img src={logo} alt="PHYSIO VIO Logo" className="mx-auto mb-3 h-16 w-auto" />
             <p className="text-sm text-muted-foreground">
               Professionelle Physiotherapie für Ihre Gesundheit
             </p>

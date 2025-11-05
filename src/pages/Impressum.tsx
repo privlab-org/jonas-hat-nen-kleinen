@@ -113,7 +113,7 @@ const Impressum = () => {
                     href="https://ec.europa.eu/consumers/odr/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ml-1 text-secondary hover:underline"
+                    className="ml-1 font-medium text-primary hover:underline"
                   >
                     https://ec.europa.eu/consumers/odr/
                   </a>

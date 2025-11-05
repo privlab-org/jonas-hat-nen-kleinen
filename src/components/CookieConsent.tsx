@@ -101,12 +101,14 @@ const CookieConsent = () => {
                     Einige sind notwendig für den Betrieb der Website, während andere uns helfen,
                     diese Website und Ihre Erfahrung zu verbessern.
                   </p>
-                  <Link
-                    to="/datenschutz"
-                    className="text-sm font-medium text-secondary hover:underline"
+                  <a
+                    href="https://www.physiovio.de/datenschutz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-primary hover:underline"
                   >
-                    Mehr erfahren in unserer Datenschutzerklärung
-                  </Link>
+                    Mehr zur Datenschutzerklärung
+                  </a>
                 </div>
               </div>
               <button
@@ -127,7 +129,12 @@ const CookieConsent = () => {
                 <Settings className="mr-2 h-4 w-4" />
                 Einstellungen
               </Button>
-              <Button onClick={handleRejectAll} variant="outline" className="flex-1 sm:flex-none">
+              <Button
+                onClick={handleRejectAll}
+                variant="outline"
+                className="flex-1 sm:flex-none"
+                aria-label="Nur notwendige Cookies akzeptieren"
+              >
                 Nur notwendige
               </Button>
               <Button
@@ -158,7 +165,7 @@ const CookieConsent = () => {
               <div className="flex-1">
                 <div className="mb-2 flex items-center gap-2">
                   <h4 className="font-semibold">Notwendige Cookies</h4>
-                  <span className="rounded-full bg-secondary/20 px-2 py-1 text-xs font-medium text-secondary">
+                  <span className="rounded-full bg-secondary/20 px-2 py-1 text-xs font-medium text-primary">
                     Immer aktiv
                   </span>
                 </div>
@@ -226,18 +233,25 @@ const CookieConsent = () => {
           </div>
 
           <div className="flex flex-col-reverse gap-3 border-t pt-4 sm:flex-row">
-            <Button onClick={handleRejectAll} variant="outline" className="flex-1">
+            <Button
+              onClick={handleRejectAll}
+              variant="outline"
+              className="flex-1"
+              aria-label="Alle Cookies ablehnen"
+            >
               Alle ablehnen
             </Button>
             <Button
               onClick={handleSavePreferences}
               className="flex-1 bg-secondary text-white hover:bg-secondary/90"
+              aria-label="Cookie-Auswahl speichern"
             >
               Auswahl speichern
             </Button>
             <Button
               onClick={handleAcceptAll}
               className="flex-1 bg-secondary text-white hover:bg-secondary/90"
+              aria-label="Alle Cookies akzeptieren"
             >
               Alle akzeptieren
             </Button>

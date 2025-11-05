@@ -30,7 +30,8 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/booking" element={<Booking />} />
+          {/* <Route path="/booking" element={<Booking />} /> */}{" "}
+          {/* Disabled - no online booking */}
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/agb" element={<AGB />} />

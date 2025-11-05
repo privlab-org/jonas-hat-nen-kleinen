@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo.png";
+import logo from "/placeholder.svg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +9,9 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Unser Team", path: "/team" },
     { name: "Leistungen", path: "/services" },
-    { name: "Kontakt", path: "/contact" },
+    { name: "Unser Team", path: "/team" },
+    // { name: "Termin buchen", path: "/booking" }, // Disabled - no online booking yet
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -48,7 +48,7 @@ const Navigation = () => {
               <img
                 src={logo}
                 alt="PHYSIO VIO - Physiotherapie Praxis Logo"
-                className="h-12 w-auto"
+                className="h-16 w-auto sm:h-20"
               />
             </button>
 
@@ -67,10 +67,10 @@ const Navigation = () => {
                 </Link>
               ))}
               <Link
-                to="/booking"
-                className="rounded-lg bg-secondary px-6 py-2.5 font-medium text-white transition-colors hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+                to="/contact"
+                className="rounded-lg bg-gradient-to-r from-primary to-primary/90 px-6 py-2.5 font-medium text-white shadow-lg transition-all hover:scale-105 hover:from-primary/90 hover:to-secondary hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
-                Termin buchen
+                Termin vereinbaren
               </Link>
             </div>
 
@@ -115,11 +115,11 @@ const Navigation = () => {
               </Link>
             ))}
             <Link
-              to="/booking"
-              className="block rounded-lg bg-secondary px-3 py-2 text-center text-sm font-medium text-white transition-all duration-200 hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+              to="/contact"
+              className="block rounded-lg bg-gradient-to-r from-primary to-primary/90 px-3 py-2 text-center text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-primary/90 hover:to-secondary hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               onClick={() => setIsOpen(false)}
             >
-              Termin buchen
+              Termin vereinbaren
             </Link>
           </div>
         </div>

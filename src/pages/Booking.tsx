@@ -1,3 +1,9 @@
+/*
+ * BOOKING PAGE - TEMPORARILY DISABLED
+ * Online booking feature is not available yet.
+ * This page may be reactivated in the future.
+ */
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
@@ -10,7 +16,7 @@ const Booking = () => {
 
       <main
         id="main-content"
-        className="bg-gradient-to-b from-tertiary/5 via-secondary/5 to-transparent pb-20 pt-32"
+        className="via-secondary/3 bg-gradient-to-b from-secondary/5 to-transparent pb-20 pt-32"
       >
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -37,9 +43,7 @@ const Booking = () => {
                     <span className="relative inline-flex h-3 w-3 rounded-full bg-secondary"></span>
                   </span>
                   <div className="text-center">
-                    <p className="text-lg font-bold text-secondary">
-                      Neueröffnung ab 1. Januar 2026
-                    </p>
+                    <p className="text-lg font-bold text-primary">Neueröffnung ab 1. Januar 2026</p>
                     <p className="text-sm text-muted-foreground">
                       Sichern Sie sich schon jetzt Ihren Wunschtermin!
                     </p>
@@ -71,7 +75,7 @@ const Booking = () => {
 
           {/* How it Works */}
           <div className="mb-12 grid gap-8 md:grid-cols-3">
-            <div className="via-tertiary/8 rounded-xl border border-tertiary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-6 text-center backdrop-blur-sm">
+            <div className="via-secondary/8 rounded-xl border border-primary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-6 text-center backdrop-blur-sm">
               <div
                 className="gradient-primary mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full"
                 aria-hidden="true"
@@ -84,7 +88,7 @@ const Booking = () => {
               </p>
             </div>
 
-            <div className="via-tertiary/8 rounded-xl border border-tertiary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-6 text-center backdrop-blur-sm">
+            <div className="via-secondary/8 rounded-xl border border-primary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-6 text-center backdrop-blur-sm">
               <div
                 className="gradient-primary mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full"
                 aria-hidden="true"
@@ -97,7 +101,7 @@ const Booking = () => {
               </p>
             </div>
 
-            <div className="via-tertiary/8 rounded-xl border border-tertiary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-6 text-center backdrop-blur-sm">
+            <div className="via-secondary/8 rounded-xl border border-primary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-6 text-center backdrop-blur-sm">
               <div
                 className="gradient-primary mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full"
                 aria-hidden="true"
@@ -112,21 +116,21 @@ const Booking = () => {
           </div>
 
           {/* Alternative Contact */}
-          <div className="gradient-soft rounded-2xl border border-tertiary/40 bg-gradient-to-br from-tertiary/20 via-secondary/10 to-tertiary/20 p-8 text-center ring-2 ring-tertiary/10">
+          <div className="gradient-soft rounded-2xl border border-secondary/40 bg-gradient-to-br from-secondary/20 via-secondary/15 to-secondary/20 p-8 text-center ring-2 ring-secondary/10">
             <Clock className="mx-auto mb-4 h-10 w-10 text-secondary" aria-hidden="true" />
             <h3 className="mb-3 text-xl font-semibold">Lieber telefonisch buchen?</h3>
             <p className="mx-auto mb-6 max-w-2xl text-muted-foreground">
               Kein Problem! Rufen Sie uns an unter{" "}
               <a
                 href="tel:+49123456789"
-                className="rounded font-medium text-secondary hover:underline focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-1"
+                className="rounded font-bold text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
               >
                 0123 456 789
               </a>{" "}
               oder senden Sie uns eine E-Mail an{" "}
               <a
                 href="mailto:info@physiovio.de"
-                className="rounded font-medium text-secondary hover:underline focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-1"
+                className="rounded font-bold text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
               >
                 info@physiovio.de
               </a>

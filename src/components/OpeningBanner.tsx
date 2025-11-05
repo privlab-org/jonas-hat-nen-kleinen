@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "/placeholder.svg";
 
 const OpeningBanner = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -53,14 +53,14 @@ const OpeningBanner = () => {
     <>
       {/* Banner - sticky unter Nav mit dynamischer Höhe */}
       <div
-        className="sticky top-20 z-40 overflow-hidden bg-tertiary shadow-lg"
+        className="sticky top-20 z-40 overflow-hidden bg-secondary shadow-lg"
         style={{
           height: `${currentHeight}px`,
         }}
       >
         {/* Radial Gradient Background */}
         <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/10 via-transparent to-transparent"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"
           aria-hidden="true"
         />
 
@@ -99,7 +99,7 @@ const OpeningBanner = () => {
           {showExtras && (
             <button
               onClick={scrollToHero}
-              className="group mt-6 inline-flex items-center justify-center rounded-xl bg-secondary px-8 py-4 font-bold text-white shadow-xl hover:bg-secondary/90 focus:outline-none focus:ring-4 focus:ring-secondary/50 focus:ring-offset-2"
+              className="group mt-6 inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 font-bold text-white shadow-xl hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/50 focus:ring-offset-2"
             >
               Erfahre mehr
               <ChevronDown
@@ -121,7 +121,7 @@ const OpeningBanner = () => {
       />
 
       {/* Padding zwischen Banner und Hero - verhindert "Auffressen" */}
-      <div className="h-8 bg-gradient-to-b from-tertiary/20 to-transparent" />
+      <div className="h-8 bg-gradient-to-b from-secondary/20 to-transparent" />
     </>
   );
 };

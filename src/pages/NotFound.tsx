@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const NotFound = () => {
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-tertiary/5 via-secondary/5 to-muted/10">
+    <div className="via-secondary/3 flex min-h-screen flex-col bg-gradient-to-b from-secondary/5 to-secondary/10">
       <Navigation />
 
       <main
@@ -29,14 +29,21 @@ const NotFound = () => {
           </p>
 
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Button asChild className="bg-secondary text-white hover:bg-secondary/90">
+            <Button
+              asChild
+              className="bg-gradient-to-r from-primary to-primary/90 text-white shadow-lg transition-all hover:scale-105 hover:from-primary/90 hover:to-secondary hover:shadow-xl"
+            >
               <Link to="/">
                 <Home className="mr-2 h-4 w-4" />
                 Zur Startseite
               </Link>
             </Button>
 
-            <Button asChild variant="outline">
+            <Button
+              asChild
+              variant="outline"
+              className="border-2 border-secondary bg-gradient-to-r from-secondary/20 to-secondary/10 text-primary shadow-md transition-all hover:scale-105 hover:border-secondary hover:from-secondary/30 hover:to-secondary/20 hover:shadow-lg"
+            >
               <button type="button" onClick={() => window.history.back()}>
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Zurück
@@ -44,29 +51,29 @@ const NotFound = () => {
             </Button>
           </div>
 
-          <div className="mt-12 rounded-xl border border-tertiary/30 bg-gradient-to-br from-tertiary/15 via-secondary/10 to-tertiary/15 p-6">
+          <div className="mt-12 rounded-xl border border-primary/30 bg-gradient-to-br from-secondary/15 via-secondary/10 to-secondary/15 p-6">
             <h2 className="mb-3 text-lg font-semibold">Schnellzugriff</h2>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link to="/team" className="text-sm text-secondary hover:underline">
+              <Link to="/team" className="text-sm font-medium text-primary hover:underline">
                 Unser Team
               </Link>
               <span className="text-muted-foreground" aria-hidden="true">
                 •
               </span>
-              <Link to="/services" className="text-sm text-secondary hover:underline">
+              <Link to="/services" className="text-sm font-medium text-primary hover:underline">
                 Leistungen
               </Link>
               <span className="text-muted-foreground" aria-hidden="true">
                 •
               </span>
-              <Link to="/contact" className="text-sm text-secondary hover:underline">
+              <Link to="/contact" className="text-sm font-medium text-primary hover:underline">
                 Kontakt
               </Link>
               <span className="text-muted-foreground" aria-hidden="true">
                 •
               </span>
-              <Link to="/booking" className="text-sm text-secondary hover:underline">
-                Termin buchen
+              <Link to="/contact" className="text-sm font-medium text-primary hover:underline">
+                Termin vereinbaren
               </Link>
             </div>
           </div>
