@@ -58,8 +58,10 @@ const Navigation = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`text-sm font-medium transition-colors hover:text-secondary focus:rounded focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 ${
-                    isActive(item.path) ? "text-secondary" : "text-foreground"
+                  className={`text-sm font-medium transition-colors hover:text-primary focus:rounded focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
+                    isActive(item.path)
+                      ? "border-b-2 border-primary text-primary"
+                      : "text-foreground"
                   }`}
                   aria-current={isActive(item.path) ? "page" : undefined}
                 >
@@ -70,7 +72,7 @@ const Navigation = () => {
                 to="/contact"
                 className="rounded-lg bg-gradient-to-r from-primary to-primary/90 px-6 py-2.5 font-medium text-white shadow-lg transition-all hover:scale-105 hover:from-primary/90 hover:to-secondary hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
-                Termin vereinbaren
+                Kontakt
               </Link>
             </div>
 
@@ -103,9 +105,9 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`block rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 ${
+                className={`block rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                   isActive(item.path)
-                    ? "bg-secondary/10 text-secondary ring-2 ring-secondary/20"
+                    ? "border-l-4 border-primary bg-primary/10 text-primary"
                     : "text-foreground hover:bg-muted"
                 }`}
                 onClick={() => setIsOpen(false)}
@@ -119,7 +121,7 @@ const Navigation = () => {
               className="block rounded-lg bg-gradient-to-r from-primary to-primary/90 px-3 py-2 text-center text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-primary/90 hover:to-secondary hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               onClick={() => setIsOpen(false)}
             >
-              Termin vereinbaren
+              Kontakt
             </Link>
           </div>
         </div>

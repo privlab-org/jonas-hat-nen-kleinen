@@ -106,15 +106,32 @@ const Services = () => {
         className="bg-gradient-to-b from-secondary/5 via-transparent to-transparent pb-20 pt-32"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="mb-16 animate-fade-in text-center">
-            <h1 className="mb-6 text-4xl font-bold sm:text-5xl">
-              <span className="text-gradient">Unsere Leistungen</span>
-            </h1>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Professionelle Physiotherapie mit modernsten Behandlungsmethoden für Ihre Gesundheit
-              und Ihr Wohlbefinden.
-            </p>
+          {/* Header mit Bild */}
+          <div className="mb-16 grid animate-fade-in gap-8 lg:grid-cols-[2fr_1fr]">
+            <div className="text-center lg:text-left">
+              <h1 className="mb-6 text-4xl font-bold sm:text-5xl">
+                <span className="text-gradient">Unsere Leistungen</span>
+              </h1>
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground lg:mx-0">
+                Professionelle Physiotherapie mit modernsten Behandlungsmethoden für Ihre Gesundheit
+                und Ihr Wohlbefinden.
+              </p>
+            </div>
+
+            {/* Hero Bild */}
+            <div className="relative overflow-hidden rounded-2xl border border-primary/30 shadow-xl ring-2 ring-secondary/10">
+              <div
+                className="gradient-primary absolute -inset-2 rounded-3xl opacity-10 blur-xl"
+                aria-hidden="true"
+              />
+              <img
+                src="/placeholder.svg"
+                alt="Professionelle Physiotherapie - Moderne Behandlungsmethoden"
+                className="relative h-full w-full rounded-2xl object-cover"
+                style={{ minHeight: "200px", maxHeight: "280px" }}
+                loading="eager"
+              />
+            </div>
           </div>
 
           {/* Services Accordion */}
@@ -129,9 +146,7 @@ const Services = () => {
                   onClick={() => toggleService(index)}
                   className="flex w-full items-center justify-between gap-3 rounded-l-2xl border-l-4 border-secondary/40 p-4 text-left transition-all hover:border-secondary hover:bg-gradient-to-r hover:from-secondary/15 hover:to-secondary/10 sm:gap-4 sm:p-6"
                 >
-                  <h3 className="text-base font-bold transition-colors group-hover:text-secondary sm:text-xl">
-                    {service.title}
-                  </h3>
+                  <h3 className="text-base font-bold sm:text-xl">{service.title}</h3>
                   <ChevronDown
                     className={`h-5 w-5 flex-shrink-0 text-muted-foreground transition-transform duration-300 sm:h-6 sm:w-6 ${
                       openIndex === index ? "rotate-180" : ""

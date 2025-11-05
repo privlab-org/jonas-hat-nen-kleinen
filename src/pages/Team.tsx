@@ -162,9 +162,7 @@ const Team = () => {
 
                     {/* Text Rechts - Kompakter */}
                     <div className="p-6 lg:pr-8">
-                      <h3 className="mb-2 text-2xl font-bold transition-colors group-hover:text-secondary">
-                        {member.name}
-                      </h3>
+                      <h3 className="mb-2 text-2xl font-bold">{member.name}</h3>
                       <p className="mb-3 text-base font-semibold text-primary">{member.role}</p>
                       <p className="mb-3 text-sm text-muted-foreground">
                         <span className="font-semibold">Spezialisierung:</span>{" "}

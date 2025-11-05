@@ -122,9 +122,7 @@ const Home = () => {
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
 
-                  <h3 className="mb-2 text-xl font-semibold transition-colors group-hover:text-secondary">
-                    {feature.title}
-                  </h3>
+                  <h3 className="mb-2 text-xl font-semibold">{feature.title}</h3>
                   <p className="text-muted-foreground">{feature.description}</p>
                 </div>
               </div>
@@ -155,9 +153,7 @@ const Home = () => {
                   <CheckCircle className="h-6 w-6 text-white" />
                 </div>
 
-                <h3 className="mb-2 text-xl font-semibold transition-colors group-hover:text-secondary">
-                  Moderne Methoden
-                </h3>
+                <h3 className="mb-2 text-xl font-semibold">Moderne Methoden</h3>
                 <p className="text-muted-foreground">Aktuelle Behandlungstechniken und Geräte</p>
               </div>
             </div>

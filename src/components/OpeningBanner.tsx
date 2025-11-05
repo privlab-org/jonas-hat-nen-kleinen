@@ -99,7 +99,7 @@ const OpeningBanner = () => {
           {showExtras && (
             <button
               onClick={scrollToHero}
-              className="group mt-6 inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 font-bold text-white shadow-xl hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/50 focus:ring-offset-2"
+              className="group mt-6 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary to-primary/90 px-8 py-4 font-semibold text-white shadow-lg transition-all hover:scale-105 hover:from-primary/90 hover:to-secondary hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               Erfahre mehr
               <ChevronDown

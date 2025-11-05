@@ -26,7 +26,7 @@ const Contact = () => {
           {/* Header */}
           <div className="mb-12 animate-fade-in text-center">
             <h1 className="mb-6 text-4xl font-bold sm:text-5xl">
-              <span className="text-gradient">Kontakt & Termin vereinbaren</span>
+              <span className="text-gradient">Termin vereinbaren</span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
               Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Wir freuen uns auf Ihre
@@ -52,64 +52,8 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Öffnungszeiten Section */}
-          <div className="mb-12 rounded-2xl border border-primary/40 bg-gradient-to-br from-card/90 via-secondary/10 to-secondary/5 p-8 shadow-lg ring-2 ring-secondary/10 backdrop-blur-sm">
-            <div className="mb-6 flex items-center justify-center">
-              <div
-                className="gradient-primary mr-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl"
-                aria-hidden="true"
-              >
-                <Clock className="h-8 w-8 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold">
-                <span className="text-gradient">Öffnungszeiten</span>
-              </h2>
-            </div>
-            <div className="mx-auto max-w-2xl">
-              <div className="space-y-3" role="table" aria-label="Öffnungszeiten der Praxis">
-                {hours.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`flex items-center justify-between rounded-lg px-4 py-3 sm:px-6 sm:py-4 ${
-                      item.time === "Geschlossen"
-                        ? "bg-muted/30"
-                        : "border border-primary/20 bg-gradient-to-r from-secondary/15 via-secondary/10 to-secondary/15 transition-all hover:border-secondary/30 hover:from-secondary/20 hover:via-secondary/15 hover:to-secondary/20"
-                    }`}
-                    role="row"
-                  >
-                    <span
-                      className="flex items-center text-sm font-medium sm:text-base"
-                      role="cell"
-                    >
-                      <Calendar
-                        className="mr-2 h-4 w-4 text-secondary sm:mr-3 sm:h-5 sm:w-5"
-                        aria-hidden="true"
-                      />
-                      {item.day}
-                    </span>
-                    <span
-                      className={`text-sm sm:text-base ${
-                        item.time === "Geschlossen"
-                          ? "text-muted-foreground"
-                          : "font-semibold text-primary"
-                      }`}
-                      role="cell"
-                    >
-                      {item.time}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 rounded-xl border border-secondary/40 bg-gradient-to-r from-secondary/30 via-secondary/25 to-secondary/30 p-4 text-center ring-2 ring-secondary/10">
-                <p className="text-sm font-medium text-foreground">
-                  💡 Termine nur nach Vereinbarung – Buchen Sie online oder rufen Sie uns an!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Kontaktinformationen & Google Maps - Nebeneinander auf Desktop */}
-          <div className="mx-auto max-w-7xl">
+          {/* Kontaktinformationen & Öffnungszeiten - Grid */}
+          <div className="mx-auto mb-12 max-w-7xl">
             <div className="grid gap-8 lg:grid-cols-2">
               {/* Contact Information */}
               <div className="via-secondary/8 flex flex-col rounded-2xl border border-primary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-8 shadow-lg backdrop-blur-sm">
@@ -201,13 +145,72 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Google Maps Integration */}
-              <div className="flex flex-col overflow-hidden rounded-2xl border border-primary/40 shadow-lg ring-2 ring-secondary/10">
+              {/* Öffnungszeiten */}
+              <div className="rounded-2xl border border-primary/40 bg-gradient-to-br from-card/90 via-secondary/10 to-secondary/5 p-8 shadow-lg ring-2 ring-secondary/10 backdrop-blur-sm">
+                <div className="mb-6 flex items-center">
+                  <div
+                    className="gradient-primary mr-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl"
+                    aria-hidden="true"
+                  >
+                    <Clock className="h-8 w-8 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold">
+                    <span className="text-gradient">Öffnungszeiten</span>
+                  </h2>
+                </div>
+                <div className="space-y-3" role="table" aria-label="Öffnungszeiten der Praxis">
+                  {hours.map((item, index) => (
+                    <div
+                      key={index}
+                      className={`flex items-center justify-between rounded-lg px-4 py-3 sm:px-6 sm:py-4 ${
+                        item.time === "Geschlossen"
+                          ? "bg-muted/30"
+                          : "border border-primary/20 bg-gradient-to-r from-secondary/15 via-secondary/10 to-secondary/15 transition-all hover:border-secondary/30 hover:from-secondary/20 hover:via-secondary/15 hover:to-secondary/20"
+                      }`}
+                      role="row"
+                    >
+                      <span
+                        className="flex items-center text-sm font-medium sm:text-base"
+                        role="cell"
+                      >
+                        <Calendar
+                          className="mr-2 h-4 w-4 text-secondary sm:mr-3 sm:h-5 sm:w-5"
+                          aria-hidden="true"
+                        />
+                        {item.day}
+                      </span>
+                      <span
+                        className={`text-sm sm:text-base ${
+                          item.time === "Geschlossen"
+                            ? "text-muted-foreground"
+                            : "font-semibold text-primary"
+                        }`}
+                        role="cell"
+                      >
+                        {item.time}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 rounded-xl border border-secondary/40 bg-gradient-to-r from-secondary/30 via-secondary/25 to-secondary/30 p-4 text-center ring-2 ring-secondary/10">
+                  <p className="text-sm font-medium text-foreground">
+                    💡 Termine nur nach Vereinbarung – Buchen Sie online oder rufen Sie uns an!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Google Maps & Anfahrt - Grid */}
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">
+              {/* Google Maps */}
+              <div className="overflow-hidden rounded-2xl border border-primary/40 shadow-lg ring-2 ring-secondary/10">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2579.9876543!2d12.1455665!3d49.5365331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a023512e88af57%3A0x9cd23eab9559cace!2sNeunaigener%20Str.%201%2C%2092533%20Wernberg-K%C3%B6blitz!5e0!3m2!1sde!2sde!4v1728567890123"
                   width="100%"
                   height="100%"
-                  style={{ border: 0, minHeight: "400px" }}
+                  style={{ border: 0, minHeight: "450px" }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -215,15 +218,48 @@ const Contact = () => {
                   className="grayscale transition-all duration-300 hover:grayscale-0"
                 ></iframe>
               </div>
-            </div>
 
-            {/* Quick Info - Volle Breite unter Grid */}
-            <div className="gradient-soft rounded-2xl border border-secondary/40 bg-gradient-to-br from-secondary/30 via-secondary/20 to-secondary/25 p-6 ring-2 ring-secondary/10">
-              <h3 className="mb-2 font-semibold">Anfahrt</h3>
-              <p className="text-sm text-muted-foreground">
-                Kostenlose Parkplätze direkt vor der Praxis. Mit öffentlichen Verkehrsmitteln: Bus
-                123 & 456, Haltestelle "Musterplatz"
-              </p>
+              {/* Anfahrt */}
+              <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-card/90 to-secondary/5 p-8 shadow-lg backdrop-blur-sm">
+                <div className="mb-6 flex items-center">
+                  <div
+                    className="gradient-primary mr-4 inline-flex h-12 w-12 items-center justify-center rounded-xl"
+                    aria-hidden="true"
+                  >
+                    <MapPin className="h-6 w-6 text-white" />
+                  </div>
+                  <h2 className="text-2xl font-bold">
+                    <span className="text-gradient">Anfahrt</span>
+                  </h2>
+                </div>
+                <div className="space-y-5 text-sm">
+                  <div>
+                    <p className="mb-2 font-semibold text-foreground">🚗 Mit dem Auto</p>
+                    <p className="text-muted-foreground">
+                      Kostenlose Parkplätze direkt vor der Praxis verfügbar. Optimale Erreichbarkeit
+                      über die B22.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="mb-2 font-semibold text-foreground">
+                      🚌 Öffentliche Verkehrsmittel
+                    </p>
+                    <p className="text-muted-foreground">
+                      Bus 123 & 456
+                      <br />
+                      Haltestelle "Musterplatz"
+                      <br />
+                      Nur 2 Minuten Fußweg zur Praxis
+                    </p>
+                  </div>
+                  <div>
+                    <p className="mb-2 font-semibold text-foreground">♿ Barrierefreiheit</p>
+                    <p className="text-muted-foreground">
+                      Unsere Praxis ist vollständig barrierefrei zugänglich.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
