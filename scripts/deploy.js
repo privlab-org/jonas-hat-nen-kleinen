@@ -58,8 +58,23 @@ function execSilent(command) {
 async function main() {
   log("\n🚀 Starting deployment process...\n", colors.bright);
 
+  // Check Git identity
+  logStep("1/9", "Checking Git identity...");
+  const gitName = execSilent("git config user.name");
+  const gitEmail = execSilent("git config user.email");
+  
+  if (!gitName || !gitEmail) {
+    logError("Git identity not configured!");
+    log("\nPlease configure your Git identity first:", colors.yellow);
+    log('  git config --global user.name "Your Name"');
+    log('  git config --global user.email "your.email@example.com"');
+    log("");
+    process.exit(1);
+  }
+  logSuccess(`Git identity: ${gitName} <${gitEmail}>`);
+
   // Check if we're on main branch
-  logStep("1/8", "Checking git branch...");
+  logStep("2/9", "Checking git branch...");
   const currentBranch = execSilent("git branch --show-current");
   if (currentBranch !== "main") {
     logWarning(`You are on branch "${currentBranch}", not "main"`);
@@ -88,7 +103,7 @@ async function main() {
   }
 
   // Check for uncommitted changes
-  logStep("2/8", "Checking for uncommitted changes...");
+  logStep("3/9", "Checking for uncommitted changes...");
   const status = execSilent("git status --porcelain");
   if (status) {
     logWarning("You have uncommitted changes:");
@@ -113,7 +128,7 @@ async function main() {
     }
 
     // Add all changes
-    logStep("2b/8", "Adding all changes...");
+    logStep("3b/9", "Adding all changes...");
     if (!exec("git add .")) {
       logError("Failed to add changes");
       process.exit(1);
@@ -134,7 +149,7 @@ async function main() {
     });
 
     // Commit
-    logStep("2c/8", "Committing changes...");
+    logStep("3c/9", "Committing changes...");
     if (!exec(`git commit -m "${commitMessage}"`)) {
       logError("Failed to commit changes");
       process.exit(1);
@@ -145,7 +160,7 @@ async function main() {
   }
 
   // Run TypeScript type checking
-  logStep("3/8", "Running TypeScript type check...");
+  logStep("4/9", "Running TypeScript type check...");
   if (!exec("pnpm typecheck")) {
     logError("TypeScript type check failed");
     log("\n❌ Deployment cancelled - please fix TypeScript errors first\n", colors.red);
@@ -154,7 +169,7 @@ async function main() {
   logSuccess("TypeScript type check passed");
 
   // Run ESLint
-  logStep("4/8", "Running ESLint...");
+  logStep("5/9", "Running ESLint...");
   if (!exec("pnpm lint")) {
     logError("ESLint check failed");
     log("\n❌ Deployment cancelled - please fix linting errors first\n", colors.red);
@@ -163,7 +178,7 @@ async function main() {
   logSuccess("ESLint check passed");
 
   // Run Prettier check
-  logStep("5/8", "Checking code formatting...");
+  logStep("6/9", "Checking code formatting...");
   if (!exec("pnpm format:check")) {
     logWarning("Code formatting issues found");
     log("\nAuto-fixing formatting...");
@@ -194,7 +209,7 @@ async function main() {
   }
 
   // Build
-  logStep("6/8", "Building project...");
+  logStep("7/9", "Building project...");
   if (!exec("pnpm build")) {
     logError("Build failed");
     log("\n❌ Deployment cancelled - build failed\n", colors.red);
@@ -203,7 +218,7 @@ async function main() {
   logSuccess("Build successful");
 
   // Push to GitHub (main repository only)
-  logStep("7/8", "Pushing to GitHub...");
+  logStep("8/9", "Pushing to GitHub...");
   log("Pushing to PhysioVio/Physio-Vio-Website...");
   
   // Get the current remote URL for origin
@@ -218,7 +233,7 @@ async function main() {
   logSuccess("Pushed to PhysioVio/Physio-Vio-Website");
 
   // Wait for GitHub Actions
-  logStep("8/8", "Triggering GitHub Actions deployment...");
+  logStep("9/9", "Triggering GitHub Actions deployment...");
   logSuccess("Push successful - GitHub Actions will now deploy your site");
 
   // Print success message
