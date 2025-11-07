@@ -14,5 +14,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/jonas-hat-nen-kleinen/",
+  base: "/Physio-Vio-Website/",
 });

@@ -144,7 +144,6 @@ const Booking = () => {
       </main>
 
       <Footer />
-      <CookieConsent />
     </div>
   );
 };

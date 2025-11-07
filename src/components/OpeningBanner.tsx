@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-import logo from "/placeholder.svg";
+import logo from "../assets/white_logo_transparent.png";
 
 const OpeningBanner = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -84,13 +84,13 @@ const OpeningBanner = () => {
               className="px-4 font-black tracking-tight text-primary"
               style={{ fontSize: `${titleSize}rem`, lineHeight: 1.1 }}
             >
-              Neueröffnung ab 1 Januar 2026
+              Neueröffnung ab 5. Januar 2026
             </h1>
 
             {/* Subtitle - Verschwindet bei 300px Höhe */}
             {showExtras && (
               <p className="px-4 text-base font-semibold text-primary/90 sm:text-xl">
-                Sichern Sie sich jetzt schon Ihren Wunschtermin!
+                Sichere dir jetzt schon deinen Wunschtermin!
               </p>
             )}
           </div>
@@ -99,7 +99,7 @@ const OpeningBanner = () => {
           {showExtras && (
             <button
               onClick={scrollToHero}
-              className="group mt-6 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary to-primary/90 px-8 py-4 font-semibold text-white shadow-lg transition-all hover:scale-105 hover:from-primary/90 hover:to-secondary hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="group mt-6 inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               Erfahre mehr
               <ChevronDown

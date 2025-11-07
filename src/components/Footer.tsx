@@ -1,13 +1,7 @@
 import { Link } from "react-router-dom";
-import logo from "/placeholder.svg";
+import logo from "../assets/Symbol_transparent.png";
 
 const Footer = () => {
-  const openCookieSettings = () => {
-    // Trigger the cookie consent banner to reappear
-    const event = new CustomEvent("openCookieSettings");
-    window.dispatchEvent(event);
-  };
-
   return (
     <footer className="border-t border-border bg-background py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -16,7 +10,7 @@ const Footer = () => {
           <div className="text-center">
             <img src={logo} alt="PHYSIO VIO Logo" className="mx-auto mb-3 h-16 w-auto" />
             <p className="text-sm text-muted-foreground">
-              Professionelle Physiotherapie für Ihre Gesundheit
+              Gemeinsam Gehen, Selbstständig ankommen.
             </p>
           </div>
 
@@ -40,12 +34,6 @@ const Footer = () => {
             >
               AGB
             </Link>
-            <button
-              onClick={openCookieSettings}
-              className="text-muted-foreground transition-colors hover:text-secondary"
-            >
-              Cookie-Einstellungen
-            </button>
           </nav>
 
           {/* Copyright */}

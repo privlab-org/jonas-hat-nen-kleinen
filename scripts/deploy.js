@@ -202,14 +202,15 @@ async function main() {
   }
   logSuccess("Build successful");
 
-  // Push to GitHub
+  // Push to GitHub (both repos)
   logStep("7/8", "Pushing to GitHub...");
+  log("Pushing to main repository (PhysioVio)...");
   if (!exec("git push origin main")) {
-    logError("Failed to push to GitHub");
+    logError("Failed to push to main repository");
     log("\n❌ Deployment failed - could not push to GitHub\n", colors.red);
     process.exit(1);
   }
-  logSuccess("Pushed to GitHub");
+  logSuccess("Pushed to both repositories (PhysioVio + backup)");
 
   // Wait for GitHub Actions
   logStep("8/8", "Triggering GitHub Actions deployment...");
@@ -226,10 +227,10 @@ async function main() {
   log("3. This usually takes 2-3 minutes");
   log("");
   log(`${colors.cyan}Check deployment status:${colors.reset}`);
-  log("https://github.com/privlab-org/physio-flow-genesis/actions");
+  log("https://github.com/PhysioVio/Physio-Vio-Website/actions");
   log("");
   log(`${colors.cyan}Your site will be available at:${colors.reset}`);
-  log("https://privlab-org.github.io/physio-flow-genesis/");
+  log("https://physiovio.github.io/Physio-Vio-Website/");
   log("");
 }
 

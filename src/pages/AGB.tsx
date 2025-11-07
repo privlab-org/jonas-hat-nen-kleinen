@@ -24,7 +24,7 @@ const AGB = () => {
                 <h2 className="mb-4 text-2xl font-semibold">§ 1 Geltungsbereich</h2>
                 <p className="text-muted-foreground">
                   Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Behandlungen und
-                  Leistungen, die von PHYSIO VIO Praxis für Physiotherapie erbracht werden. Mit der
+                  Leistungen, die von Physio VIO erbracht werden. Mit der
                   Inanspruchnahme unserer Leistungen akzeptiert der Patient diese AGB.
                 </p>
               </section>
@@ -32,8 +32,8 @@ const AGB = () => {
               <section>
                 <h2 className="mb-4 text-2xl font-semibold">§ 2 Terminvereinbarung</h2>
                 <p className="mb-4 text-muted-foreground">
-                  Termine können telefonisch, per E-Mail oder über unser Online-Buchungssystem
-                  vereinbart werden. Die Bestätigung erfolgt in der Regel innerhalb von 24 Stunden.
+                  Termine können telefonisch, per E-Mail oder über WhatsApp vereinbart werden. Die
+                  Bestätigung erfolgt in der Regel innerhalb von 24 Stunden.
                 </p>
                 <ul className="list-inside list-disc space-y-2 text-muted-foreground">
                   <li>Termine sollten rechtzeitig vereinbart werden</li>
@@ -148,11 +148,7 @@ const AGB = () => {
 
               <div className="border-t border-border pt-6 text-sm text-muted-foreground">
                 <p>Stand: Januar 2025</p>
-                <p className="mt-2">
-                  PHYSIO VIO Praxis für Physiotherapie
-                  <br />
-                  Musterstraße 123, 12345 Musterstadt
-                </p>
+             
               </div>
             </div>
           </div>

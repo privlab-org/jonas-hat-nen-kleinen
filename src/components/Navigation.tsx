@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "/placeholder.svg";
+import logo from "../assets/basic-file.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,7 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Leistungen", path: "/services" },
-    { name: "Unser Team", path: "/team" },
+    { name: "Über Uns", path: "/team" },
     // { name: "Termin buchen", path: "/booking" }, // Disabled - no online booking yet
   ];
 

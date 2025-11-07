@@ -23,9 +23,9 @@ const Impressum = () => {
               <section>
                 <h2 className="mb-4 text-2xl font-semibold">Angaben gemäß § 5 TMG</h2>
                 <p className="text-muted-foreground">
-                  PHYSIO VIO Praxis für Physiotherapie
+                  Physio VIO
                   <br />
-                  Max Mustermann
+                  Inhaber: Jonas Rothmeier
                   <br />
                   Neunaigenerstraße 1
                   <br />
@@ -36,99 +36,113 @@ const Impressum = () => {
               <section>
                 <h2 className="mb-4 text-2xl font-semibold">Kontakt</h2>
                 <p className="text-muted-foreground">
-                  Telefon: 0123 456789
+                  Telefon: 09604 9389600
                   <br />
                   E-Mail: info@physiovio.de
                 </p>
               </section>
 
               <section>
-                <h2 className="mb-4 text-2xl font-semibold">Berufsbezeichnung</h2>
+                <h2 className="mb-4 text-2xl font-semibold">Berufsrechtliche Angaben</h2>
                 <p className="text-muted-foreground">
-                  Physiotherapeut
+                  Berufsbezeichnung: Physiotherapeut (verliehen in Deutschland)
                   <br />
-                  Zuständige Kammer: [Kammer eintragen]
+                  Zuständige Aufsichtsbehörde: Gesundheitsamt Schwandorf
                   <br />
-                  Verliehen in: Deutschland
+                  Es gelten die Bestimmungen des Masseur- und Physiotherapeutengesetzes (MPhG).
                 </p>
               </section>
 
               <section>
-                <h2 className="mb-4 text-2xl font-semibold">Aufsichtsbehörde</h2>
+                <h2 className="mb-4 text-2xl font-semibold">Umsatzsteuer</h2>
                 <p className="text-muted-foreground">
-                  [Name der zuständigen Aufsichtsbehörde]
-                  <br />
-                  [Adresse der Behörde]
-                  <br />
-                  [Stadt, PLZ]
-                </p>
-              </section>
-
-              <section>
-                <h2 className="mb-4 text-2xl font-semibold">Berufsrechtliche Regelungen</h2>
-                <ul className="list-inside list-disc space-y-2 text-muted-foreground">
-                  <li>Berufsordnung für Physiotherapeuten</li>
-                  <li>Masseur- und Physiotherapeutengesetz (MPhG)</li>
-                  <li>Ausbildungs- und Prüfungsverordnung (PhysTh-APrV)</li>
-                </ul>
-              </section>
-
-              <section>
-                <h2 className="mb-4 text-2xl font-semibold">Umsatzsteuer-ID</h2>
-                <p className="text-muted-foreground">
-                  Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
-                  <br />
-                  [USt-IdNr. eintragen]
-                </p>
-              </section>
-
-              <section>
-                <h2 className="mb-4 text-2xl font-semibold">Berufshaftpflichtversicherung</h2>
-                <p className="text-muted-foreground">
-                  [Name der Versicherung]
-                  <br />
-                  [Adresse der Versicherung]
-                  <br />
-                  Geltungsraum: Deutschland
-                </p>
-              </section>
-
-              <section>
-                <h2 className="mb-4 text-2xl font-semibold">Redaktionell verantwortlich</h2>
-                <p className="text-muted-foreground">
-                  Max Mustermann
-                  <br />
-                  Musterstraße 123
-                  <br />
-                  12345 Musterstadt
-                </p>
-              </section>
-
-              <section>
-                <h2 className="mb-4 text-2xl font-semibold">EU-Streitschlichtung</h2>
-                <p className="text-muted-foreground">
-                  Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
-                  bereit:
-                  <a
-                    href="https://ec.europa.eu/consumers/odr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-1 font-medium text-primary hover:underline"
-                  >
-                    https://ec.europa.eu/consumers/odr/
-                  </a>
-                  <br />
-                  Unsere E-Mail-Adresse finden Sie oben im Impressum.
+                 
+                  Steuernummer: [Wird noch ergänzt]
                 </p>
               </section>
 
               <section>
                 <h2 className="mb-4 text-2xl font-semibold">
-                  Verbraucherstreitbeilegung / Universalschlichtungsstelle
+                  Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
                 </h2>
                 <p className="text-muted-foreground">
-                  Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-                  Verbraucherschlichtungsstelle teilzunehmen.
+                  Jonas Rothmeier
+                  <br />
+                  Physiotherapeut
+                  <br />
+                  Neunaigenerstraße 1
+                  <br />
+                  92533 Wernberg-Köblitz
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-semibold">Haftungsausschluss</h2>
+                <h3 className="mb-2 mt-4 text-lg font-medium">Haftung für Inhalte</h3>
+                <p className="text-muted-foreground">
+                  Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die
+                  Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir keine
+                  Gewähr.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium">Haftung für Links</h3>
+                <p className="text-muted-foreground">
+                  Diese Website enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir
+                  keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der
+                  jeweilige Anbieter oder Betreiber verantwortlich.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-semibold">Urheberrecht</h2>
+                <p className="text-muted-foreground">
+                  Die auf dieser Website erstellten Inhalte und Werke unterliegen dem deutschen
+                  Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
+                  Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen
+                  Zustimmung des jeweiligen Autors bzw. Erstellers.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-semibold">
+                  Hinweis gemäß § 36 VSBG / Art. 14 ODR-VO
+                </h2>
+                <p className="text-muted-foreground">
+                  Die Europäische Kommission stellt eine Plattform zur Verbraucherstreitbeilegung
+                  bereit:{" "}
+                  <a
+                    href="https://consumer-redress.ec.europa.eu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-primary hover:underline"
+                  >
+                    https://consumer-redress.ec.europa.eu/
+                  </a>
+                </p>
+                <p className="mt-3 text-muted-foreground">
+                  Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren
+                  vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-semibold">
+                  Hinweis zum Heilmittelwerbegesetz
+                </h2>
+                <p className="text-muted-foreground">
+                  Die Informationen auf dieser Website dienen ausschließlich der allgemeinen
+                  Information und ersetzen nicht die persönliche Beratung durch qualifizierte
+                  Ärzte, Therapeuten oder Heilpraktiker.
+                </p>
+                <p className="mt-3 text-muted-foreground">
+                  Wir weisen ausdrücklich darauf hin, dass bei unseren Leistungsangeboten kein
+                  Heilversprechen abgegeben wird. Es kann weder eine Garantie noch ein Versprechen
+                  für eine Linderung oder Verbesserung von Krankheitszuständen gegeben werden.
+                </p>
+                <p className="mt-3 text-muted-foreground">
+                  Die bereitgestellten Inhalte dienen nicht zur Selbstdiagnose oder
+                  Selbstbehandlung. Für Schäden, die aus der Nutzung der auf dieser Website
+                  veröffentlichten Informationen entstehen könnten, übernehmen wir keine Haftung.
                 </p>
               </section>
             </div>

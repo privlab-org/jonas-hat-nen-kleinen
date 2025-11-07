@@ -1,32 +1,33 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import CookieConsent from "@/components/CookieConsent";
 import { Building2, Users } from "lucide-react";
-import placeholderImage from "/placeholder.svg";
+import jonasImage from "../assets/jonas.png";
+import marieImage from "../assets/marie.png";
+import sigiImage from "../assets/sigi.png";
+import praxisImage from "../assets/praxis.png";
 
 const Team = () => {
   const teamMembers = [
     {
       name: "Jonas",
-      role: "Physiotherapeut",
-      specialization: "Manuelle Therapie & Krankengymnastik",
+      role: "Physiotherapeut & Praxisinhaber",
+      fortbildungen: "Manuelle Lymphdrainage, Manuelle Therapie i.A., Kiefergelenkstherapie",
       description: "Mit Leidenschaft und Fachkompetenz für Ihre Gesundheit im Einsatz.",
-      image: placeholderImage,
+      image: jonasImage,
     },
     {
       name: "Marie",
       role: "Physiotherapeutin",
-      specialization: "Lymphdrainage & Bobath-Therapie",
+      fortbildungen: "Manuelle Lymphdrainage, Manuelle Therapie, Krankengymnastik nach Bobath, Krankengymnastik am Gerät",
       description: "Einfühlsame Betreuung mit dem Fokus auf individuelle Behandlungskonzepte.",
-      image: placeholderImage,
+      image: marieImage,
     },
     {
       name: "Sigi",
-      role: "Rezeption & Verwaltung",
-      specialization: "Terminkoordination & Patientenbetreuung",
+      role: "Verwaltung",
       description:
         "Ihr freundlicher erster Kontakt und Ansprechpartner für alle organisatorischen Fragen.",
-      image: placeholderImage,
+      image: sigiImage,
     },
   ];
   return (
@@ -44,7 +45,7 @@ const Team = () => {
               Über <span className="text-gradient">Uns</span>
             </h1>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-              Lernen Sie unser Team und unsere moderne Praxis kennen – Ihr Partner für Gesundheit
+              Lernen unsere Praxis und unser Team kennen – Dein Partner für Gesundheit
               und Wohlbefinden.
             </p>
           </div>
@@ -68,7 +69,7 @@ const Team = () => {
               <div className="overflow-hidden rounded-2xl border border-primary/30 shadow-lg ring-2 ring-secondary/10">
                 <div className="relative aspect-square overflow-hidden">
                   <img
-                    src={placeholderImage}
+                    src={praxisImage}
                     alt="PHYSIO VIO Praxis - Moderne Räumlichkeiten und professionelle Ausstattung"
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                     loading="lazy"
@@ -83,17 +84,22 @@ const Team = () => {
               {/* Praxis Info */}
               <div className="flex flex-col justify-center space-y-6">
                 <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-card/90 via-secondary/10 to-secondary/5 p-8 shadow-lg backdrop-blur-sm">
-                  <h3 className="mb-4 text-2xl font-bold">Moderne Ausstattung</h3>
-                  <p className="mb-4 leading-relaxed text-muted-foreground">
-                    Unsere Praxis bietet Ihnen eine angenehme und professionelle Atmosphäre für Ihre
-                    Behandlung. Mit modernster Ausstattung und hellen, freundlichen Räumen schaffen
-                    wir die idealen Bedingungen für Ihre Genesung.
+                  <h3 className="mb-4 text-2xl font-bold">Unsere Philosophie</h3>
+                  <h4 className="mb-3 text-sm font-semibold text-primary">Gemeinsam gehen, selbstständig ankommen.</h4>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Bei Physio VIO steht der Mensch im Mittelpunkt – mit all seinen individuellen Bedürfnissen und Zielen. Wir begleiten Sie auf Ihrem Weg zur Gesundheit, zeigen Richtungen auf und geben Impulse. Schritt für Schritt lernen Sie, Verantwortung für Ihren Körper zu übernehmen und nachhaltig selbstständig zu bleiben.
                   </p>
+                </div>
+
+                <div className="gradient-soft rounded-2xl border border-secondary/40 bg-gradient-to-br from-secondary/30 via-secondary/20 to-secondary/25 p-8 ring-2 ring-secondary/10">
+                  <h3 className="mb-4 text-2xl font-bold">Moderne Ausstattung</h3>
+                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+Klare Räume, durchdachte Gestaltung und eine harmonische Stimmung – alles darauf ausgelegt, dass du dich voll auf deine Genesung einlassen kannst.                  </p>
                   <ul className="space-y-2">
                     <li className="flex items-center text-sm">
                       <div className="mr-2 h-1.5 w-1.5 rounded-full bg-secondary"></div>
                       <span className="text-muted-foreground">
-                        Modernste Trainings- und Therapiegeräte
+                       Hochwertige Trainings- und Therapiegeräte
                       </span>
                     </li>
                     <li className="flex items-center text-sm">
@@ -102,23 +108,13 @@ const Team = () => {
                     </li>
                     <li className="flex items-center text-sm">
                       <div className="mr-2 h-1.5 w-1.5 rounded-full bg-secondary"></div>
-                      <span className="text-muted-foreground">Barrierefreier Zugang für alle</span>
+                      <span className="text-muted-foreground">Barrierefreier Zugang</span>
                     </li>
                     <li className="flex items-center text-sm">
                       <div className="mr-2 h-1.5 w-1.5 rounded-full bg-secondary"></div>
-                      <span className="text-muted-foreground">Kostenlose Parkplätze vor Ort</span>
+                      <span className="text-muted-foreground">Kostenlose Parkplätze direkt vor der Praxis</span>
                     </li>
                   </ul>
-                </div>
-
-                <div className="gradient-soft rounded-2xl border border-secondary/40 bg-gradient-to-br from-secondary/30 via-secondary/20 to-secondary/25 p-8 ring-2 ring-secondary/10">
-                  <h3 className="mb-4 text-xl font-bold">Unsere Philosophie</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    Bei PHYSIO VIO steht der Mensch im Mittelpunkt. Wir nehmen uns Zeit für Sie und
-                    erstellen individuelle Behandlungspläne, die genau auf Ihre Bedürfnisse
-                    zugeschnitten sind. Vertrauen, Kompetenz und Empathie sind die Grundpfeiler
-                    unserer Arbeit.
-                  </p>
                 </div>
               </div>
             </div>
@@ -164,10 +160,12 @@ const Team = () => {
                     <div className="p-6 lg:pr-8">
                       <h3 className="mb-2 text-2xl font-bold">{member.name}</h3>
                       <p className="mb-3 text-base font-semibold text-primary">{member.role}</p>
-                      <p className="mb-3 text-sm text-muted-foreground">
-                        <span className="font-semibold">Spezialisierung:</span>{" "}
-                        {member.specialization}
-                      </p>
+                      {member.fortbildungen && (
+                        <p className="mb-3 text-sm text-muted-foreground">
+                          <span className="font-semibold">Fortbildungen:</span>{" "}
+                          {member.fortbildungen}
+                        </p>
+                      )}
                       <p className="text-sm leading-relaxed text-muted-foreground">
                         {member.description}
                       </p>
@@ -181,7 +179,6 @@ const Team = () => {
       </main>
 
       <Footer />
-      <CookieConsent />
     </div>
   );
 };

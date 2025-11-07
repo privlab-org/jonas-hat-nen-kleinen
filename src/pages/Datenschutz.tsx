@@ -37,16 +37,18 @@ const Datenschutz = () => {
                   Verantwortlich für die Datenverarbeitung auf dieser Website ist:
                   <br />
                   <br />
-                  PHYSIO VIO Praxis für Physiotherapie
+                  Physio VIO
                   <br />
-                  Max Mustermann
+                  Praxis für Physiotherapie
+                  <br />
+                  Inhaber: Jonas Rothmeier
                   <br />
                   Neunaigenerstraße 1
                   <br />
                   92533 Wernberg-Köblitz
                   <br />
                   <br />
-                  Telefon: 0123 456789
+                  Telefon: 09604 9389600
                   <br />
                   E-Mail: info@physiovio.de
                 </p>
@@ -75,46 +77,35 @@ const Datenschutz = () => {
                   dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
                 </p>
 
-                <h3 className="mb-3 mt-6 text-xl font-semibold">Kontaktformular</h3>
+                <h3 className="mb-3 mt-6 text-xl font-semibold">Kontaktaufnahme</h3>
                 <p className="text-muted-foreground">
-                  Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus
-                  dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks
-                  Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
-                  Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                  Wenn Sie uns per E-Mail, Telefon oder WhatsApp kontaktieren, werden Ihre Angaben
+                  inklusive der von Ihnen mitgeteilten Kontaktdaten zwecks Bearbeitung der Anfrage
+                  und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir
+                  nicht ohne Ihre Einwilligung weiter. Die Verarbeitung erfolgt auf Grundlage von
+                  Art. 6 Abs. 1 lit. b DSGVO.
                 </p>
               </section>
 
               <section>
-                <h2 className="mb-4 text-2xl font-semibold">4. Cookies</h2>
-                <p className="mb-4 text-muted-foreground">
-                  Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem
-                  Endgerät gespeichert werden und die Ihr Browser speichert. Sie dienen dazu, unser
-                  Angebot nutzerfreundlicher zu machen.
-                </p>
+                <h2 className="mb-4 text-2xl font-semibold">4. Externe Dienste</h2>
 
-                <h3 className="mb-3 mt-6 text-xl font-semibold">Notwendige Cookies</h3>
-                <p className="mb-4 text-muted-foreground">
-                  Diese Cookies sind für die Grundfunktionen der Website erforderlich und können
-                  nicht deaktiviert werden. Dazu gehören Cookies zur Speicherung Ihrer
-                  Cookie-Einstellungen.
-                </p>
-
-                <h3 className="mb-3 mt-6 text-xl font-semibold">Funktionale Cookies</h3>
-                <p className="mb-4 text-muted-foreground">
-                  Diese Cookies ermöglichen erweiterte Funktionen und eine Personalisierung der
-                  Website.
-                </p>
-
-                <h3 className="mb-3 mt-6 text-xl font-semibold">Analyse-Cookies</h3>
-                <p className="mb-4 text-muted-foreground">
-                  Diese Cookies helfen uns, die Nutzung unserer Website zu analysieren und zu
-                  verbessern. Sie werden nur mit Ihrer Einwilligung gesetzt.
-                </p>
-
-                <h3 className="mb-3 mt-6 text-xl font-semibold">Marketing-Cookies</h3>
+                <h3 className="mb-3 mt-6 text-xl font-semibold">Google Maps</h3>
                 <p className="text-muted-foreground">
-                  Diese Cookies werden verwendet, um Ihnen relevante Werbung anzuzeigen. Sie werden
-                  nur mit Ihrer Einwilligung gesetzt.
+                  Diese Website nutzt den Kartendienst Google Maps zur Darstellung unseres
+                  Standorts. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street,
+                  Dublin 4, Irland. Bei der Nutzung von Google Maps werden Daten an Google
+                  übertragen und dort gespeichert. Die Nutzung erfolgt auf Grundlage von Art. 6 Abs.
+                  1 lit. f DSGVO. Weitere Informationen finden Sie in der Datenschutzerklärung von
+                  Google:{" "}
+                  <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-primary hover:underline"
+                  >
+                    https://policies.google.com/privacy
+                  </a>
                 </p>
               </section>
 

@@ -2,19 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
-import {
-  Activity,
-  Droplets,
-  HandMetal,
-  Brain,
-  Dumbbell,
-  Sparkles,
-  Zap,
-  Radio,
-  Flame,
-  Snowflake,
-  ChevronDown,
-} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Services = () => {
@@ -26,75 +14,79 @@ const Services = () => {
   };
   const services = [
     {
-      icon: Activity,
       title: "Krankengymnastik (KG)",
       description:
         "Gezielte Bewegungstherapie zur Wiederherstellung, Erhaltung und Förderung der Gesundheit. Durch individuelle Übungen verbessern wir Ihre Beweglichkeit, Kraft und Koordination. Ideal nach Operationen, Verletzungen oder bei chronischen Beschwerden.",
       features: ["Individuelle Therapiepläne", "Schmerzlinderung", "Beweglichkeitsförderung"],
     },
     {
-      icon: Droplets,
       title: "Manuelle Lymphdrainage (MLD)",
       description:
-        "Sanfte Massagetechnik zur Aktivierung des Lymphsystems und Förderung des Lymphabflusses. Besonders wirksam bei Schwellungen, Ödemen nach Operationen oder Verletzungen. Die rhythmischen Griffe unterstützen die natürliche Entgiftung des Körpers.",
+        "Sanfte Massagetechnik zur Aktivierung des Lymphsystems und Förderung des Lymphabflusses. Besonders wirksam bei Schwellungen, Ödemen nach Operationen oder Verletzungen. Die rhythmischen Griffe unterstützen die natürliche Entstauung des Körpers.",
       features: ["Ödembehandlung", "Entstauungstherapie", "Postoperative Nachsorge"],
     },
     {
-      icon: HandMetal,
       title: "Manuelle Therapie (MT)",
       description:
         "Spezielle Handgrifftechniken zur Behandlung von Funktionsstörungen des Bewegungsapparates. Wir mobilisieren Gelenke, dehnen verkürzte Muskeln und behandeln Blockaden. Besonders effektiv bei Gelenkschmerzen, Bewegungseinschränkungen und Verspannungen.",
       features: ["Gelenkbehandlung", "Mobilisation", "Schmerztherapie"],
     },
+       {
+      title: "Kiefergelenkstherapie (CMD)",
+      description:
+        "Spezialisierte Behandlung von Kiefergelenksbeschwerden (craniomandibulärer Dysfunktion). Durch gezielte manuelle Techniken behandeln wir Kieferschmerzen, Verspannungen und Bewegungseinschränkungen. Wirksam bei Zähneknirschen, Kopfschmerzen und Kiefergelenksproblemen.",
+      features: ["Kiefergelenkbehandlung", "Schmerzreduktion", "Funktionsverbesserung"],
+    },
+      {
+      title: "Krankengymnastik am Gerät (KGG)",
+      description:
+        "Gerätegestütztes Training zur Verbesserung von Kraft, Ausdauer und Koordination. An modernen Trainingsgeräten arbeiten wir gezielt an Schwachstellen. Perfekt für den Muskelaufbau und die Stabilisierung nach Verletzungen.",
+      features: ["Muskelaufbau", "Stabilisationstraining", "Funktionelles Training"],
+    },
     {
-      icon: Brain,
       title: "Krankengymnastik nach Bobath (KG Bobath)",
       description:
         "Spezielles neurophysiologisches Behandlungskonzept für Patienten mit neurologischen Erkrankungen. Durch gezielte Bewegungsanbahnung verbessern wir gestörte Bewegungsmuster. Ideal nach Schlaganfall, bei Parkinson oder Multipler Sklerose.",
       features: ["Neurologische Rehabilitation", "Bewegungsanbahnung", "Alltagstraining"],
     },
+  
     {
-      icon: Dumbbell,
-      title: "Krankengymnastik am Gerät (KGG)",
-      description:
-        "Gerätegestütztes Training zur Verbesserung von Kraft, Ausdauer und Koordination. An modernen Trainingsgeräten arbeiten wir gezielt an Ihren individuellen Schwachstellen. Perfekt für den Muskelaufbau und die Stabilisierung nach Verletzungen.",
-      features: ["Muskelaufbau", "Stabilisationstraining", "Funktionelles Training"],
-    },
-    {
-      icon: Sparkles,
       title: "Klassische Massagetherapie (KMT)",
       description:
         "Bewährte Massagetechniken zur Lockerung verspannter Muskulatur und Förderung der Durchblutung. Durch gezielte Griffe lösen wir Verhärtungen, lindern Schmerzen und steigern Ihr Wohlbefinden. Ideal zur Entspannung und Regeneration.",
       features: ["Muskellösung", "Durchblutungsförderung", "Entspannung"],
     },
     {
-      icon: Zap,
       title: "Elektrotherapie (ET)",
       description:
         "Therapeutische Anwendung von elektrischem Strom zur Schmerzlinderung und Muskelstimulation. Die elektrischen Impulse fördern die Durchblutung, lockern die Muskulatur und unterstützen den Heilungsprozess. Wirksam bei akuten und chronischen Schmerzen.",
       features: ["Schmerzreduktion", "Muskelstimulation", "Durchblutungsförderung"],
     },
     {
-      icon: Radio,
-      title: "Ultraschalltherapie",
+      title: "Ultraschalltherapie (WT mittels Ultraschall)",
       description:
         "Behandlung mit hochfrequenten Schallwellen, die tief ins Gewebe eindringen. Fördert die Heilung, lockert Verklebungen und lindert Entzündungen. Besonders wirksam bei Sehnenreizungen, Muskelverhärtungen und chronischen Schmerzzuständen.",
       features: ["Tiefenwärme", "Gewebeheilung", "Schmerzlinderung"],
     },
     {
-      icon: Flame,
-      title: "Wärmetherapie (Fango/Heißluft)",
+      title: "Wärmetherapie (WT mittels Fango/Heißluft)",
       description:
         "Wohltuende Wärmeanwendungen zur Muskelentspannung und Durchblutungsförderung. Fango-Packungen oder Heißluft bereiten das Gewebe optimal auf weitere Behandlungen vor. Ideal zur Lockerung bei Verspannungen und chronischen Schmerzen.",
       features: ["Muskelentspannung", "Durchblutungsförderung", "Vorbereitung"],
     },
     {
-      icon: Snowflake,
       title: "Kältetherapie (KT)",
       description:
         "Gezielte Kälteanwendungen zur Schmerzlinderung und Entzündungshemmung. Kälte reduziert Schwellungen, hemmt Entzündungsprozesse und lindert akute Schmerzen. Perfekt nach Verletzungen, Operationen oder bei entzündlichen Erkrankungen.",
       features: ["Entzündungshemmung", "Abschwellung", "Akute Schmerzlinderung"],
     },
+    {
+      title: "Kinesiotaping",
+      description:
+        "Elastische Tape-Verbände zur Unterstützung der Muskulatur und Gelenke. Die speziellen Tapes stabilisieren, ohne die Bewegungsfreiheit einzuschränken, fördern die Durchblutung und können Schmerzen lindern. Ideal für Sportler und bei Überlastungssyndromen.",
+      features: ["Muskelunterstützung", "Gelenkstabilisation", "Schmerzlinderung"],
+    },
+ 
   ];
 
   return (
@@ -113,8 +105,8 @@ const Services = () => {
                 <span className="text-gradient">Unsere Leistungen</span>
               </h1>
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground lg:mx-0">
-                Professionelle Physiotherapie mit modernsten Behandlungsmethoden für Ihre Gesundheit
-                und Ihr Wohlbefinden.
+                Physiotherapie mit modernsten Behandlungsmethoden für Deine Gesundheit
+                und Dein Wohlbefinden.
               </p>
             </div>
 
@@ -186,8 +178,8 @@ const Services = () => {
           <div className="gradient-soft rounded-2xl border border-secondary/30 bg-gradient-to-br from-secondary/20 via-secondary/15 to-secondary/25 p-8 text-center shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Individuelle Beratung gewünscht?</h2>
             <p className="mx-auto mb-6 max-w-2xl text-muted-foreground">
-              Jeder Patient ist einzigartig. Gerne beraten wir Sie persönlich, welche
-              Behandlungsmethoden für Ihre individuellen Bedürfnisse am besten geeignet sind.
+              Gerne beraten wir Dich persönlich, welche
+              Behandlungsmethoden für Deine individuellen Bedürfnisse am besten geeignet sind.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link
@@ -208,7 +200,6 @@ const Services = () => {
       </main>
 
       <Footer />
-      <CookieConsent />
     </div>
   );
 };

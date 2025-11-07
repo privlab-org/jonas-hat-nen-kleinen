@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Heart, Users, Clock, CheckCircle } from "lucide-react";
-import placeholderImage from "/placeholder.svg";
+import heroImage from "../assets/hero.png";
+import featuresImage from "../assets/features.png";
 import Navigation from "@/components/Navigation";
 import OpeningBanner from "@/components/OpeningBanner";
 import Footer from "@/components/Footer";
-import CookieConsent from "@/components/CookieConsent";
 
 const Home = () => {
   return (
@@ -18,24 +18,22 @@ const Home = () => {
       <section id="hero-section" className="relative overflow-hidden">
         <div className="gradient-soft absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-8 lg:pb-24 lg:pt-40">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="grid items-center gap-12 lg:grid-cols-[3fr_2fr]">
             <div className="animate-fade-in space-y-6 text-center lg:space-y-8 lg:text-left">
               <div
                 className="mt-5 inline-block rounded-full border border-secondary/20 bg-secondary/10 px-4 py-2 pt-[5px] lg:mt-0 lg:pt-2"
                 role="status"
               >
                 <span className="text-sm font-medium text-primary">
-                  Ihre Gesundheit, unser Ziel
+                  Deine Gesundheit, unser Ziel
                 </span>
               </div>
               <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-                <span className="text-gradient">Gemeinsam</span> auf dem Weg
-                <br />
-                zur Genesung
+                <span className="text-gradient">Gemeinsam Gehen, </span> Selbstständig ankommen.
               </h1>
-              <p className="mx-auto max-w-xl text-lg text-muted-foreground lg:mx-0">
-                Wir begleiten Sie auf diesem Weg – professionell, individuell und mit Herz. Ihre
-                aktive Mitarbeit macht den Unterschied.
+              <p className="mx-auto max-w-xl text-lg text-primary lg:mx-0">
+                Wir begleiten Dich auf diesem Weg – professionell, individuell und mit Herz. Deine{" "}
+                <strong>aktive Mitarbeit</strong> macht den Unterschied.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
@@ -56,13 +54,13 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative animate-fade-in">
+            <div className="relative animate-fade-in lg:max-w-lg lg:ml-auto">
               <div
                 className="gradient-primary absolute -inset-4 rounded-3xl opacity-10 blur-3xl"
                 aria-hidden="true"
               />
               <img
-                src={placeholderImage}
+                src={heroImage}
                 alt="Moderne Physiotherapie Praxis - Helle, freundliche Behandlungsräume"
                 className="relative h-auto w-full rounded-2xl shadow-2xl"
                 loading="eager"
@@ -74,7 +72,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section - Creative Asymmetric Layout */}
+      {/* Features Section - Two Column Layout with Full Image */}
       <section className="relative overflow-hidden bg-secondary/5 py-20 lg:py-32">
         {/* Decorative Background */}
         <div className="gradient-soft absolute inset-0 opacity-40" aria-hidden="true" />
@@ -86,76 +84,67 @@ const Home = () => {
               Warum <span className="text-gradient">PHYSIO VIO</span>?
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground lg:text-xl">
-              Ihre Gesundheit verdient professionelle Betreuung und individuelle Aufmerksamkeit
+              Deine Gesundheit verdient professionelle Betreuung und individuelle Aufmerksamkeit.
             </p>
           </div>
 
-          {/* Creative Grid Layout with Integrated Image */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-            {[
-              {
-                icon: Heart,
-                title: "Individuelle Betreuung",
-                description: "Jeder Patient erhält einen maßgeschneiderten Therapieplan",
-              },
-              {
-                icon: Users,
-                title: "Erfahrenes Team",
-                description: "Hochqualifizierte Therapeuten mit langjähriger Erfahrung",
-              },
-              {
-                icon: Clock,
-                title: "Flexible Termine",
-                description: "Termine, die sich Ihrem Alltag anpassen",
-              },
-            ].map((feature, index) => (
+          {/* Two Column Layout: Image Left, Features Right */}
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+            {/* Image Section - Full Height */}
+            <div className="relative">
               <div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card/90 via-secondary/5 to-secondary/10 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-secondary/50 hover:from-secondary/10 hover:via-secondary/15 hover:to-secondary/20 hover:shadow-2xl"
-              >
-                <div className="relative">
-                  {/* Icon - Back to Original Style */}
-                  <div
-                    className="gradient-primary mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
-                    aria-hidden="true"
-                  >
-                    <feature.icon className="h-6 w-6 text-white" />
-                  </div>
-
-                  <h3 className="mb-2 text-xl font-semibold">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-
-            {/* Image integrated as 4th card - spans 2 columns on lg */}
-            <div className="relative sm:col-span-2 lg:col-span-2">
-              <div
-                className="gradient-primary absolute -inset-2 rounded-3xl opacity-10 blur-xl"
+                className="gradient-primary absolute -inset-4 rounded-3xl opacity-10 blur-2xl"
                 aria-hidden="true"
               />
               <img
-                src={placeholderImage}
+                src={featuresImage}
                 alt="Professionelle Physiotherapie Behandlung"
-                className="relative h-full w-full rounded-2xl object-cover shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
-                style={{ maxHeight: "240px", objectPosition: "bottom right" }}
+                className="relative h-full w-full rounded-2xl object-cover shadow-2xl"
                 loading="lazy"
               />
             </div>
 
-            {/* 4th Feature Card */}
-            <div className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card/90 via-secondary/5 to-secondary/10 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-secondary/50 hover:from-secondary/10 hover:via-secondary/15 hover:to-secondary/20 hover:shadow-2xl sm:col-span-2 lg:col-span-1">
-              <div className="relative">
+            {/* Features Grid - 2x2 */}
+            <div className="grid gap-6 sm:grid-cols-2">
+              {[
+                {
+                  icon: Heart,
+                  title: "Individuelle Betreuung",
+                  description: "Jeder Patient erhält einen maßgeschneiderten Therapieplan.",
+                },
+                {
+                  icon: Users,
+                  title: "Erfahrenes Team",
+                  description: "Hochqualifizierte Therapeuten mit langjähriger Erfahrung.",
+                },
+                {
+                  icon: Clock,
+                  title: "Flexible Termine",
+                  description: "Termine, die sich deinem Alltag anpassen.",
+                },
+                {
+                  icon: CheckCircle,
+                  title: "Moderne Methoden",
+                  description: "Aktuelle Behandlungstechniken und Geräte.",
+                },
+              ].map((feature, index) => (
                 <div
-                  className="gradient-primary mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
-                  aria-hidden="true"
+                  key={index}
+                  className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card/90 via-secondary/5 to-secondary/10 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-secondary/50 hover:from-secondary/10 hover:via-secondary/15 hover:to-secondary/20 hover:shadow-2xl"
                 >
-                  <CheckCircle className="h-6 w-6 text-white" />
-                </div>
+                  <div className="relative">
+                    <div
+                      className="gradient-primary mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
+                      aria-hidden="true"
+                    >
+                      <feature.icon className="h-6 w-6 text-white" />
+                    </div>
 
-                <h3 className="mb-2 text-xl font-semibold">Moderne Methoden</h3>
-                <p className="text-muted-foreground">Aktuelle Behandlungstechniken und Geräte</p>
-              </div>
+                    <h3 className="mb-2 text-xl font-semibold">{feature.title}</h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -169,10 +158,10 @@ const Home = () => {
         <div className="gradient-soft absolute inset-0 opacity-50" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 id="cta-heading" className="mb-6 text-3xl font-bold sm:text-4xl">
-            Haben Sie Fragen?
+            Hast Du Fragen?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
-            Kontaktieren Sie uns gerne - wir beraten Sie persönlich und beantworten alle Ihre Fragen
+            Kontaktiere uns gerne - wir beraten Dich persönlich und beantworten alle Deine Fragen
             zur Physiotherapie.
           </p>
           <Link
@@ -189,7 +178,6 @@ const Home = () => {
       </section>
 
       <Footer />
-      <CookieConsent />
     </div>
   );
 };

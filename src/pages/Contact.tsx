@@ -1,15 +1,14 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import CookieConsent from "@/components/CookieConsent";
 import { Mail, Phone, MapPin, Clock, Calendar, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const hours = [
-    { day: "Montag", time: "08:00 - 18:00" },
-    { day: "Dienstag", time: "08:00 - 18:00" },
-    { day: "Mittwoch", time: "08:00 - 20:00" },
-    { day: "Donnerstag", time: "08:00 - 18:00" },
-    { day: "Freitag", time: "08:00 - 16:00" },
+    { day: "Montag", time: "07:30 - 18:30" },
+    { day: "Dienstag", time: "07:30 - 18:30" },
+    { day: "Mittwoch", time: "07:30 - 18:30" },
+    { day: "Donnerstag", time: "07:30 - 18:30" },
+    { day: "Freitag", time: "07:30 - 14:00" },
     { day: "Samstag", time: "Geschlossen" },
     { day: "Sonntag", time: "Geschlossen" },
   ];
@@ -26,12 +25,9 @@ const Contact = () => {
           {/* Header */}
           <div className="mb-12 animate-fade-in text-center">
             <h1 className="mb-6 text-4xl font-bold sm:text-5xl">
-              <span className="text-gradient">Termin vereinbaren</span>
+              <span className="text-gradient">Kontakt</span>
             </h1>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Wir freuen uns auf Ihre
-              Nachricht.
-            </p>
+          
 
             {/* Neueröffnung Banner */}
             <div className="mx-auto mt-8 max-w-2xl">
@@ -42,9 +38,9 @@ const Contact = () => {
                     <span className="relative inline-flex h-3 w-3 rounded-full bg-secondary"></span>
                   </span>
                   <div className="text-center">
-                    <p className="text-lg font-bold text-primary">Neueröffnung ab 1. Januar 2026</p>
+                    <p className="text-lg font-bold text-primary">Neueröffnung ab 5. Januar 2026</p>
                     <p className="text-sm text-muted-foreground">
-                      Sichern Sie sich schon jetzt Ihren Wunschtermin!
+                      Sicher Dir jetzt schon Deinen Wunschtermin!
                     </p>
                   </div>
                 </div>
@@ -82,12 +78,11 @@ const Contact = () => {
                     <div>
                       <p className="mb-1 font-medium">Telefon</p>
                       <a
-                        href="tel:+49123456789"
+                        href="tel:+499604 9389600"
                         className="text-muted-foreground transition-colors hover:text-secondary"
                       >
-                        0123 456 789
+                       09604 9389600
                       </a>
-                      <p className="mt-1 text-sm text-muted-foreground">Mo-Fr: 08:00 - 18:00 Uhr</p>
                     </div>
                   </div>
 
@@ -114,12 +109,12 @@ const Contact = () => {
                     <div>
                       <p className="mb-1 font-medium">WhatsApp</p>
                       <a
-                        href="https://wa.me/49123456789"
+                        href="https://wa.me/4917141806097"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground transition-colors hover:text-secondary"
                       >
-                        0123 456 789
+                        0171 4180697
                       </a>
                       <p className="mt-1 text-sm text-muted-foreground">
                         Schnelle Antworten per Chat
@@ -134,11 +129,11 @@ const Contact = () => {
                     <MessageCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#25D366]" />
                     <div className="text-sm">
                       <p className="font-medium text-foreground">
-                        💬 Nutzen Sie unseren WhatsApp-Service!
+                      Nutzen Sie unseren WhatsApp-Service!
                       </p>
                       <p className="mt-1 text-muted-foreground">
                         Klicken Sie auf das grüne WhatsApp-Symbol rechts unten für direkten
-                        Chat-Support. Schnell, unkompliziert und zu jeder Zeit!
+                        Chat-Support.
                       </p>
                     </div>
                   </div>
@@ -194,8 +189,7 @@ const Contact = () => {
                 </div>
                 <div className="mt-6 rounded-xl border border-secondary/40 bg-gradient-to-r from-secondary/30 via-secondary/25 to-secondary/30 p-4 text-center ring-2 ring-secondary/10">
                   <p className="text-sm font-medium text-foreground">
-                    💡 Termine nur nach Vereinbarung – Buchen Sie online oder rufen Sie uns an!
-                  </p>
+Termine zu unseren Öffnungszeiten – oder nach Vereinbarung.                  </p>
                 </div>
               </div>
             </div>
@@ -234,26 +228,25 @@ const Contact = () => {
                 </div>
                 <div className="space-y-5 text-sm">
                   <div>
-                    <p className="mb-2 font-semibold text-foreground">🚗 Mit dem Auto</p>
+                    <p className="mb-2 font-semibold text-foreground">Mit dem Auto</p>
                     <p className="text-muted-foreground">
                       Kostenlose Parkplätze direkt vor der Praxis verfügbar. Optimale Erreichbarkeit
-                      über die B22.
+                      über die A93 und die A6.
                     </p>
                   </div>
                   <div>
                     <p className="mb-2 font-semibold text-foreground">
-                      🚌 Öffentliche Verkehrsmittel
+                      Öffentliche Verkehrsmittel
                     </p>
                     <p className="text-muted-foreground">
-                      Bus 123 & 456
+                      Bahnhof Wernberg-Köblitz
+                      
                       <br />
-                      Haltestelle "Musterplatz"
-                      <br />
-                      Nur 2 Minuten Fußweg zur Praxis
+                      Nur 5 Minuten Fußweg zur Praxis
                     </p>
                   </div>
                   <div>
-                    <p className="mb-2 font-semibold text-foreground">♿ Barrierefreiheit</p>
+                    <p className="mb-2 font-semibold text-foreground">Barrierefreiheit</p>
                     <p className="text-muted-foreground">
                       Unsere Praxis ist vollständig barrierefrei zugänglich.
                     </p>
@@ -266,7 +259,6 @@ const Contact = () => {
       </main>
 
       <Footer />
-      <CookieConsent />
     </div>
   );
 };
