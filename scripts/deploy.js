@@ -232,25 +232,28 @@ async function main() {
   }
   logSuccess("Pushed to PhysioVio/Physio-Vio-Website");
 
-  // Wait for GitHub Actions
-  logStep("9/9", "Triggering GitHub Actions deployment...");
-  logSuccess("Push successful - GitHub Actions will now deploy your site");
+  // Deploy to gh-pages branch
+  logStep("9/9", "Deploying to gh-pages branch...");
+  log("Pushing dist folder to gh-pages branch...");
+  if (!exec("npx gh-pages -d dist -r https://github.com/PhysioVio/Physio-Vio-Website.git")) {
+    logError("Failed to deploy to gh-pages branch");
+    log("\n❌ Deployment failed - could not push to gh-pages\n", colors.red);
+    process.exit(1);
+  }
+  logSuccess("Deployed to gh-pages branch");
 
   // Print success message
   log("\n" + "=".repeat(60), colors.green);
-  log("🎉 Deployment initiated successfully!", colors.bright);
+  log("🎉 Deployment completed successfully!", colors.bright);
   log("=".repeat(60) + "\n", colors.green);
 
-  log(`${colors.cyan}What happens next:${colors.reset}`);
-  log("1. GitHub Actions workflow is triggered");
-  log("2. Your site will be built and deployed to GitHub Pages");
-  log("3. This usually takes 2-3 minutes");
+  log(`${colors.cyan}Your site has been deployed!${colors.reset}`);
   log("");
-  log(`${colors.cyan}Check deployment status:${colors.reset}`);
-  log("https://github.com/PhysioVio/Physio-Vio-Website/actions");
-  log("");
-  log(`${colors.cyan}Your site will be available at:${colors.reset}`);
+  log(`${colors.cyan}GitHub Pages URL:${colors.reset}`);
   log("https://physiovio.github.io/Physio-Vio-Website/");
+  log("");
+  log(`${colors.cyan}Custom domain (if configured):${colors.reset}`);
+  log("https://www.physiovio.de/");
   log("");
 }
 
