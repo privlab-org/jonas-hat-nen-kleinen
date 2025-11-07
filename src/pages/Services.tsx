@@ -31,13 +31,13 @@ const Services = () => {
         "Spezielle Handgrifftechniken zur Behandlung von Funktionsstörungen des Bewegungsapparates. Wir mobilisieren Gelenke, dehnen verkürzte Muskeln und behandeln Blockaden. Besonders effektiv bei Gelenkschmerzen, Bewegungseinschränkungen und Verspannungen.",
       features: ["Gelenkbehandlung", "Mobilisation", "Schmerztherapie"],
     },
-       {
+    {
       title: "Kiefergelenkstherapie (CMD)",
       description:
         "Spezialisierte Behandlung von Kiefergelenksbeschwerden (craniomandibulärer Dysfunktion). Durch gezielte manuelle Techniken behandeln wir Kieferschmerzen, Verspannungen und Bewegungseinschränkungen. Wirksam bei Zähneknirschen, Kopfschmerzen und Kiefergelenksproblemen.",
       features: ["Kiefergelenkbehandlung", "Schmerzreduktion", "Funktionsverbesserung"],
     },
-      {
+    {
       title: "Krankengymnastik am Gerät (KGG)",
       description:
         "Gerätegestütztes Training zur Verbesserung von Kraft, Ausdauer und Koordination. An modernen Trainingsgeräten arbeiten wir gezielt an Schwachstellen. Perfekt für den Muskelaufbau und die Stabilisierung nach Verletzungen.",
@@ -49,7 +49,7 @@ const Services = () => {
         "Spezielles neurophysiologisches Behandlungskonzept für Patienten mit neurologischen Erkrankungen. Durch gezielte Bewegungsanbahnung verbessern wir gestörte Bewegungsmuster. Ideal nach Schlaganfall, bei Parkinson oder Multipler Sklerose.",
       features: ["Neurologische Rehabilitation", "Bewegungsanbahnung", "Alltagstraining"],
     },
-  
+
     {
       title: "Klassische Massagetherapie (KMT)",
       description:
@@ -86,7 +86,6 @@ const Services = () => {
         "Elastische Tape-Verbände zur Unterstützung der Muskulatur und Gelenke. Die speziellen Tapes stabilisieren, ohne die Bewegungsfreiheit einzuschränken, fördern die Durchblutung und können Schmerzen lindern. Ideal für Sportler und bei Überlastungssyndromen.",
       features: ["Muskelunterstützung", "Gelenkstabilisation", "Schmerzlinderung"],
     },
- 
   ];
 
   return (
@@ -105,8 +104,8 @@ const Services = () => {
                 <span className="text-gradient">Unsere Leistungen</span>
               </h1>
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground lg:mx-0">
-                Physiotherapie mit modernsten Behandlungsmethoden für Deine Gesundheit
-                und Dein Wohlbefinden.
+                Physiotherapie mit modernsten Behandlungsmethoden für Deine Gesundheit und Dein
+                Wohlbefinden.
               </p>
             </div>
 
@@ -178,8 +177,8 @@ const Services = () => {
           <div className="gradient-soft rounded-2xl border border-secondary/30 bg-gradient-to-br from-secondary/20 via-secondary/15 to-secondary/25 p-8 text-center shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Individuelle Beratung gewünscht?</h2>
             <p className="mx-auto mb-6 max-w-2xl text-muted-foreground">
-              Gerne beraten wir Dich persönlich, welche
-              Behandlungsmethoden für Deine individuellen Bedürfnisse am besten geeignet sind.
+              Gerne beraten wir Dich persönlich, welche Behandlungsmethoden für Deine individuellen
+              Bedürfnisse am besten geeignet sind.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link

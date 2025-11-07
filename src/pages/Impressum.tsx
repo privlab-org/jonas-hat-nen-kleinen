@@ -55,10 +55,7 @@ const Impressum = () => {
 
               <section>
                 <h2 className="mb-4 text-2xl font-semibold">Umsatzsteuer</h2>
-                <p className="text-muted-foreground">
-                 
-                  Steuernummer: [Wird noch ergänzt]
-                </p>
+                <p className="text-muted-foreground">Steuernummer: [Wird noch ergänzt]</p>
               </section>
 
               <section>
@@ -126,13 +123,11 @@ const Impressum = () => {
               </section>
 
               <section>
-                <h2 className="mb-4 text-2xl font-semibold">
-                  Hinweis zum Heilmittelwerbegesetz
-                </h2>
+                <h2 className="mb-4 text-2xl font-semibold">Hinweis zum Heilmittelwerbegesetz</h2>
                 <p className="text-muted-foreground">
                   Die Informationen auf dieser Website dienen ausschließlich der allgemeinen
-                  Information und ersetzen nicht die persönliche Beratung durch qualifizierte
-                  Ärzte, Therapeuten oder Heilpraktiker.
+                  Information und ersetzen nicht die persönliche Beratung durch qualifizierte Ärzte,
+                  Therapeuten oder Heilpraktiker.
                 </p>
                 <p className="mt-3 text-muted-foreground">
                   Wir weisen ausdrücklich darauf hin, dass bei unseren Leistungsangeboten kein

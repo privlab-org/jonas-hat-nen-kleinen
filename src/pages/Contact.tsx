@@ -27,7 +27,6 @@ const Contact = () => {
             <h1 className="mb-6 text-4xl font-bold sm:text-5xl">
               <span className="text-gradient">Kontakt</span>
             </h1>
-          
 
             {/* Neueröffnung Banner */}
             <div className="mx-auto mt-8 max-w-2xl">
@@ -81,7 +80,7 @@ const Contact = () => {
                         href="tel:+499604 9389600"
                         className="text-muted-foreground transition-colors hover:text-secondary"
                       >
-                       09604 9389600
+                        09604 9389600
                       </a>
                     </div>
                   </div>
@@ -129,7 +128,7 @@ const Contact = () => {
                     <MessageCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#25D366]" />
                     <div className="text-sm">
                       <p className="font-medium text-foreground">
-                      Nutzen Sie unseren WhatsApp-Service!
+                        Nutzen Sie unseren WhatsApp-Service!
                       </p>
                       <p className="mt-1 text-muted-foreground">
                         Klicken Sie auf das grüne WhatsApp-Symbol rechts unten für direkten
@@ -189,7 +188,8 @@ const Contact = () => {
                 </div>
                 <div className="mt-6 rounded-xl border border-secondary/40 bg-gradient-to-r from-secondary/30 via-secondary/25 to-secondary/30 p-4 text-center ring-2 ring-secondary/10">
                   <p className="text-sm font-medium text-foreground">
-Termine zu unseren Öffnungszeiten – oder nach Vereinbarung.                  </p>
+                    Termine zu unseren Öffnungszeiten – oder nach Vereinbarung.{" "}
+                  </p>
                 </div>
               </div>
             </div>
@@ -235,12 +235,9 @@ Termine zu unseren Öffnungszeiten – oder nach Vereinbarung.                  
                     </p>
                   </div>
                   <div>
-                    <p className="mb-2 font-semibold text-foreground">
-                      Öffentliche Verkehrsmittel
-                    </p>
+                    <p className="mb-2 font-semibold text-foreground">Öffentliche Verkehrsmittel</p>
                     <p className="text-muted-foreground">
                       Bahnhof Wernberg-Köblitz
-                      
                       <br />
                       Nur 5 Minuten Fußweg zur Praxis
                     </p>

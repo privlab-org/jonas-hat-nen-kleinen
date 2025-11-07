@@ -54,7 +54,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative animate-fade-in lg:max-w-lg lg:ml-auto">
+            <div className="relative animate-fade-in lg:ml-auto lg:max-w-lg">
               <div
                 className="gradient-primary absolute -inset-4 rounded-3xl opacity-10 blur-3xl"
                 aria-hidden="true"

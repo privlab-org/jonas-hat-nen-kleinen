@@ -24,8 +24,8 @@ const AGB = () => {
                 <h2 className="mb-4 text-2xl font-semibold">§ 1 Geltungsbereich</h2>
                 <p className="text-muted-foreground">
                   Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Behandlungen und
-                  Leistungen, die von Physio VIO erbracht werden. Mit der
-                  Inanspruchnahme unserer Leistungen akzeptiert der Patient diese AGB.
+                  Leistungen, die von Physio VIO erbracht werden. Mit der Inanspruchnahme unserer
+                  Leistungen akzeptiert der Patient diese AGB.
                 </p>
               </section>
 
@@ -148,7 +148,6 @@ const AGB = () => {
 
               <div className="border-t border-border pt-6 text-sm text-muted-foreground">
                 <p>Stand: Januar 2025</p>
-             
               </div>
             </div>
           </div>

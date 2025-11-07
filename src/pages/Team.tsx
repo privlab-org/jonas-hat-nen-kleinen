@@ -18,7 +18,8 @@ const Team = () => {
     {
       name: "Marie",
       role: "Physiotherapeutin",
-      fortbildungen: "Manuelle Lymphdrainage, Manuelle Therapie, Krankengymnastik nach Bobath, Krankengymnastik am Gerät",
+      fortbildungen:
+        "Manuelle Lymphdrainage, Manuelle Therapie, Krankengymnastik nach Bobath, Krankengymnastik am Gerät",
       description: "Einfühlsame Betreuung mit dem Fokus auf individuelle Behandlungskonzepte.",
       image: marieImage,
     },
@@ -45,8 +46,8 @@ const Team = () => {
               Über <span className="text-gradient">Uns</span>
             </h1>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-              Lernen unsere Praxis und unser Team kennen – Dein Partner für Gesundheit
-              und Wohlbefinden.
+              Lernen unsere Praxis und unser Team kennen – Dein Partner für Gesundheit und
+              Wohlbefinden.
             </p>
           </div>
 
@@ -85,21 +86,28 @@ const Team = () => {
               <div className="flex flex-col justify-center space-y-6">
                 <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-card/90 via-secondary/10 to-secondary/5 p-8 shadow-lg backdrop-blur-sm">
                   <h3 className="mb-4 text-2xl font-bold">Unsere Philosophie</h3>
-                  <h4 className="mb-3 text-sm font-semibold text-primary">Gemeinsam gehen, selbstständig ankommen.</h4>
+                  <h4 className="mb-3 text-sm font-semibold text-primary">
+                    Gemeinsam gehen, selbstständig ankommen.
+                  </h4>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    Bei Physio VIO steht der Mensch im Mittelpunkt – mit all seinen individuellen Bedürfnissen und Zielen. Wir begleiten Sie auf Ihrem Weg zur Gesundheit, zeigen Richtungen auf und geben Impulse. Schritt für Schritt lernen Sie, Verantwortung für Ihren Körper zu übernehmen und nachhaltig selbstständig zu bleiben.
+                    Bei Physio VIO steht der Mensch im Mittelpunkt – mit all seinen individuellen
+                    Bedürfnissen und Zielen. Wir begleiten Sie auf Ihrem Weg zur Gesundheit, zeigen
+                    Richtungen auf und geben Impulse. Schritt für Schritt lernen Sie, Verantwortung
+                    für Ihren Körper zu übernehmen und nachhaltig selbstständig zu bleiben.
                   </p>
                 </div>
 
                 <div className="gradient-soft rounded-2xl border border-secondary/40 bg-gradient-to-br from-secondary/30 via-secondary/20 to-secondary/25 p-8 ring-2 ring-secondary/10">
                   <h3 className="mb-4 text-2xl font-bold">Moderne Ausstattung</h3>
                   <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
-Klare Räume, durchdachte Gestaltung und eine harmonische Stimmung – alles darauf ausgelegt, dass du dich voll auf deine Genesung einlassen kannst.                  </p>
+                    Klare Räume, durchdachte Gestaltung und eine harmonische Stimmung – alles darauf
+                    ausgelegt, dass du dich voll auf deine Genesung einlassen kannst.{" "}
+                  </p>
                   <ul className="space-y-2">
                     <li className="flex items-center text-sm">
                       <div className="mr-2 h-1.5 w-1.5 rounded-full bg-secondary"></div>
                       <span className="text-muted-foreground">
-                       Hochwertige Trainings- und Therapiegeräte
+                        Hochwertige Trainings- und Therapiegeräte
                       </span>
                     </li>
                     <li className="flex items-center text-sm">
@@ -112,7 +120,9 @@ Klare Räume, durchdachte Gestaltung und eine harmonische Stimmung – alles dar
                     </li>
                     <li className="flex items-center text-sm">
                       <div className="mr-2 h-1.5 w-1.5 rounded-full bg-secondary"></div>
-                      <span className="text-muted-foreground">Kostenlose Parkplätze direkt vor der Praxis</span>
+                      <span className="text-muted-foreground">
+                        Kostenlose Parkplätze direkt vor der Praxis
+                      </span>
                     </li>
                   </ul>
                 </div>
